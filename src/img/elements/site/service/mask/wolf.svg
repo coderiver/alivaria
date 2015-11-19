@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="211.333px" height="243.199px" viewBox="0 0 211.333 243.199" enable-background="new 0 0 211.333 243.199"
+	 xml:space="preserve">
+<g>
+	<g>
+		<defs>
+			<polygon id="SVGID_1_" points="136.332,60.684 160.471,0 178.451,35.068 188.549,84.577 179.682,98.617 203.576,162.194 
+				199.142,163.643 211.333,191.598 190.027,188.767 196.164,203.969 185.103,202.56 189.537,208.471 178.451,208.471 
+				178.451,217.091 164.412,217.091 170.323,223.988 150.619,223.003 153.819,231.377 143.229,226.698 143.229,243.199 
+				105.05,230.393 66.873,243.199 66.873,226.698 56.281,231.377 59.484,223.003 39.779,223.988 45.69,217.091 31.651,217.091 
+				31.651,208.471 20.567,208.471 25,202.56 14.068,203.564 19.121,188.883 0,191.229 10.961,163.643 6.527,162.194 30.419,98.617 
+				21.552,84.577 31.651,35.068 49.631,0 73.77,60.684 			"/>
+		</defs>
+		<use xlink:href="#SVGID_1_"  overflow="visible" fill="#909291"/>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<polygon clip-path="url(#SVGID_2_)" fill="#666665" points="26.725,37.286 52.341,30.388 64.657,54.034 30.419,98.617 
+			11.946,104.775 3.325,82.607 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#666665" points="185.593,37.286 159.976,30.388 147.661,54.034 178.33,98.617 
+			200.371,104.775 208.992,82.607 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#EBEBEB" points="49.508,-5.573 49.508,32.358 61.639,56.005 59.853,98.309 
+			49.508,112.656 91.751,60.684 87.748,15.117 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#EBEBEB" points="160.533,-5.573 160.533,32.358 148.402,56.005 150.188,98.308 
+			160.533,112.655 118.29,60.684 122.293,15.117 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#9EA2A3" points="180.421,126.203 134.853,58.961 105.05,53.79 105.05,53.789 
+			75.247,58.96 29.68,126.203 10.714,183.347 26.478,177.189 58.991,182.362 105.05,207.732 105.05,207.732 151.111,182.361 
+			183.623,177.189 199.387,183.347 		"/>
+		<radialGradient id="SVGID_3_" cx="106.5291" cy="151.3836" r="88.4364" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#646A6C"/>
+			<stop  offset="0.8787" style="stop-color:#8F979A"/>
+		</radialGradient>
+		<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" points="185.594,158.716 167.122,141.475 141.258,128.173 
+			105.05,139.012 68.844,128.173 49.508,133.038 24.508,158.716 6.774,189.506 8.005,221.278 62.822,233.662 67.284,244.986 
+			77.342,236.941 105.05,243.199 134.862,236.467 143.227,245.355 148.224,233.448 202.097,221.278 203.329,189.506 		"/>
+		<radialGradient id="SVGID_4_" cx="62.7475" cy="225.5894" r="11.1464" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#749399"/>
+			<stop  offset="0.2077" style="stop-color:#739196"/>
+			<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+			<stop  offset="0.7061" style="stop-color:#647F83"/>
+			<stop  offset="0.9735" style="stop-color:#586F73"/>
+			<stop  offset="1" style="stop-color:#566D71"/>
+		</radialGradient>
+		<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_4_)" points="58.929,220.232 51.725,236.858 73.77,220.971 70.938,214.32 		
+			"/>
+		
+			<radialGradient id="SVGID_5_" cx="460.4351" cy="225.5894" r="11.1464" gradientTransform="matrix(-1 0 0 1 606.4941 0)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#749399"/>
+			<stop  offset="0.2077" style="stop-color:#739196"/>
+			<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+			<stop  offset="0.7061" style="stop-color:#647F83"/>
+			<stop  offset="0.9735" style="stop-color:#586F73"/>
+			<stop  offset="1" style="stop-color:#566D71"/>
+		</radialGradient>
+		<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_5_)" points="149.876,220.232 157.081,236.858 135.037,220.971 
+			137.87,214.32 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#749399" points="1.108,163.889 22.83,161.627 31.035,124.357 9.236,133.962 		"/>
+		<polygon clip-path="url(#SVGID_2_)" fill="#749399" points="209.856,163.891 188.133,161.629 178.821,123.617 201.728,133.962 		
+			"/>
+		<g clip-path="url(#SVGID_2_)">
+			<radialGradient id="SVGID_6_" cx="47.9075" cy="170.2929" r="45.2866" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#749399"/>
+				<stop  offset="0.2077" style="stop-color:#739196"/>
+				<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+				<stop  offset="0.7061" style="stop-color:#647F83"/>
+				<stop  offset="0.9735" style="stop-color:#586F73"/>
+				<stop  offset="1" style="stop-color:#566D71"/>
+			</radialGradient>
+			<polygon fill="url(#SVGID_6_)" points="60.469,154.036 23.03,179.159 13.424,203.053 24.262,211.673 50.124,188.52 
+				64.657,152.559 			"/>
+			<polygon fill="#ABCACF" points="44.336,214.691 36.577,225.219 54.127,225.219 69.644,216.354 66.134,206.316 			"/>
+			<polygon fill="#6F6F6F" points="30.665,203.607 29.742,219.309 58.929,215.244 69.644,205.638 64.657,193.322 			"/>
+			<polygon fill="#ABCACF" points="64.657,152.559 42.243,188.52 14.409,210.441 60.962,205.268 71.307,191.723 			"/>
+			<polygon fill="#484848" points="71.307,219.862 73.338,232.425 65.95,244.986 92.182,242.4 97.909,224.111 			"/>
+			<polygon fill="#292929" points="55.235,209.333 85.9,231.502 88.302,212.843 75.186,201.389 			"/>
+			<polygon fill="#7C7C7C" points="80.359,210.196 63.178,177.928 63.178,146.894 69.644,137.655 92.551,150.033 			"/>
+			<radialGradient id="SVGID_7_" cx="78.0181" cy="181.4999" r="39.448" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#749399"/>
+				<stop  offset="0.2077" style="stop-color:#739196"/>
+				<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+				<stop  offset="0.7061" style="stop-color:#647F83"/>
+				<stop  offset="0.9735" style="stop-color:#586F73"/>
+				<stop  offset="1" style="stop-color:#566D71"/>
+			</radialGradient>
+			<polygon fill="url(#SVGID_7_)" points="77.957,176.45 44.336,210.196 79.188,210.196 			"/>
+			<polygon fill="#C0C0C0" points="30.419,98.617 33.621,108.1 21.689,129.587 11.453,179.775 24.508,158.716 35.448,117.691 
+				61.143,79.774 			"/>
+		</g>
+		<g clip-path="url(#SVGID_2_)">
+			<radialGradient id="SVGID_8_" cx="155.2979" cy="160.3174" r="49.5081" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#749399"/>
+				<stop  offset="0.2077" style="stop-color:#739196"/>
+				<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+				<stop  offset="0.7061" style="stop-color:#647F83"/>
+				<stop  offset="0.9735" style="stop-color:#586F73"/>
+				<stop  offset="1" style="stop-color:#566D71"/>
+			</radialGradient>
+			<polygon fill="url(#SVGID_8_)" points="149.016,154.036 186.456,179.159 196.063,203.053 185.224,211.673 159.362,188.52 
+				144.83,152.559 			"/>
+			<polygon fill="#ABCACF" points="165.15,214.691 172.91,225.219 155.36,225.219 139.842,216.354 143.353,206.316 			"/>
+			<polygon fill="#6F6F6F" points="178.821,203.607 179.746,219.309 151.112,215.059 139.842,205.638 144.83,193.322 			"/>
+			<polygon fill="#ABCACF" points="144.83,152.559 167.245,188.52 196.371,211.18 148.341,204.345 138.18,191.723 			"/>
+			<polygon fill="#484848" points="138.18,219.862 136.148,232.425 143.538,244.986 117.305,242.4 111.579,224.111 			"/>
+			<polygon fill="#292929" points="154.252,209.333 123.585,231.502 121.184,212.843 134.3,201.389 			"/>
+			<polygon fill="#7C7C7C" points="129.127,210.196 146.308,177.928 146.308,146.894 139.842,137.655 116.936,150.033 			"/>
+			<radialGradient id="SVGID_9_" cx="137.0099" cy="184.4557" r="32.5613" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#749399"/>
+				<stop  offset="0.2077" style="stop-color:#739196"/>
+				<stop  offset="0.4487" style="stop-color:#6D8A8F"/>
+				<stop  offset="0.7061" style="stop-color:#647F83"/>
+				<stop  offset="0.9735" style="stop-color:#586F73"/>
+				<stop  offset="1" style="stop-color:#566D71"/>
+			</radialGradient>
+			<polygon fill="url(#SVGID_9_)" points="131.53,176.45 165.15,210.196 130.298,210.196 			"/>
+			<polygon fill="#C0C0C0" points="179.068,98.617 175.866,108.1 187.797,129.587 198.033,179.775 184.978,158.716 174.039,117.691 
+				148.342,79.774 			"/>
+		</g>
+		<radialGradient id="SVGID_10_" cx="106.1601" cy="99.9708" r="52.0466" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#F5F5F5"/>
+			<stop  offset="0.1934" style="stop-color:#F1F1F1"/>
+			<stop  offset="0.4161" style="stop-color:#E6E6E6"/>
+			<stop  offset="0.6534" style="stop-color:#D3D3D3"/>
+			<stop  offset="0.8993" style="stop-color:#B8B8B8"/>
+			<stop  offset="1" style="stop-color:#AAAAAA"/>
+		</radialGradient>
+		<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_10_)" points="124.509,74.724 105.05,60.684 85.592,74.724 68.598,111.179 
+			68.598,136.794 85.793,149.112 105.05,153.298 124.309,149.112 141.505,136.794 141.505,111.179 		"/>
+	</g>
+	<g>
+		<defs>
+			<polygon id="SVGID_11_" points="133.254,158.161 124.386,147.817 115.519,126.203 108.869,118.998 105.05,118.998 
+				101.234,118.998 94.583,126.203 85.715,147.817 76.849,158.161 73.154,210.196 82.391,235.195 105.05,243.199 127.71,235.195 
+				136.948,210.196 			"/>
+		</defs>
+		<radialGradient id="SVGID_12_" cx="105.7897" cy="195.1383" r="33.5023" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#EBEBEB"/>
+			<stop  offset="1" style="stop-color:#C0C0C0"/>
+		</radialGradient>
+		<use xlink:href="#SVGID_11_"  overflow="visible" fill="url(#SVGID_12_)"/>
+		<clipPath id="SVGID_13_">
+			<use xlink:href="#SVGID_11_"  overflow="visible"/>
+		</clipPath>
+		<polygon clip-path="url(#SVGID_13_)" fill="#AAAAAA" points="116.997,117.891 105.05,115.858 105.05,115.858 93.106,117.89 
+			85.715,147.817 89.411,209.333 105.05,209.333 105.05,209.332 120.691,209.332 124.386,147.817 		"/>
+		<radialGradient id="SVGID_14_" cx="106.1591" cy="190.6749" r="57.8978" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#CBCBCB"/>
+			<stop  offset="0.2511" style="stop-color:#BBBBBB"/>
+			<stop  offset="0.7335" style="stop-color:#9F9F9F"/>
+			<stop  offset="1" style="stop-color:#939393"/>
+		</radialGradient>
+		<polygon clip-path="url(#SVGID_13_)" fill="url(#SVGID_14_)" points="116.258,160.378 116.258,123.617 110.716,115.304 
+			105.05,115.304 99.385,115.304 93.843,123.617 93.843,160.378 87.932,208.039 105.05,226.144 122.169,208.039 		"/>
+		<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="105.0517" y1="254.2852" x2="105.0517" y2="218.9908">
+			<stop  offset="0" style="stop-color:#9F9F9F"/>
+			<stop  offset="1" style="stop-color:#EBEBEB"/>
+		</linearGradient>
+		<polygon clip-path="url(#SVGID_13_)" fill="url(#SVGID_15_)" points="105.05,200.836 105.05,200.835 70.938,210.995 
+			75.868,240.184 105.05,245.909 105.05,245.908 134.234,240.183 139.165,210.996 		"/>
+	</g>
+	<polygon fill="#666665" points="73.77,60.684 52.833,91.843 59.853,98.309 49.508,133.038 73.77,143.753 	"/>
+	<polygon fill="#666665" points="136.948,60.684 157.884,91.843 150.864,98.309 153.75,134.282 136.948,143.753 	"/>
+	<polygon points="49.508,133.038 62.504,126.941 73.77,126.757 81.405,130.884 85.057,148.586 65.376,143.753 	"/>
+	<polygon points="161.001,133.038 148.005,126.941 136.739,126.757 129.105,130.884 125.453,148.586 145.132,143.753 	"/>
+	<polygon points="67.284,140.889 39.717,186.057 16.134,201.328 44.336,189.012 69.829,142.645 	"/>
+	<polygon points="142.696,140.889 170.262,186.057 193.844,201.328 165.642,189.012 140.15,142.645 	"/>
+	<polygon points="110.901,196.956 105.05,196.956 99.202,196.956 89.183,205.561 93.106,219.862 105.05,226.144 116.997,219.862 
+		120.919,205.561 	"/>
+	<polygon points="105.05,233.163 87.748,233.163 105.05,237.781 122.354,233.163 	"/>
+	<polygon points="101.973,233.163 103.634,222.449 106.037,222.449 107.513,233.163 105.05,235.472 	"/>
+	<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="30.4194" y1="64.8843" x2="52.564" y2="64.8843">
+		<stop  offset="0" style="stop-color:#4F4E4C"/>
+		<stop  offset="0.3573" style="stop-color:#424240"/>
+		<stop  offset="1" style="stop-color:#292929"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_16_)" points="49.508,31.151 35.186,35.007 30.419,64.884 30.419,98.617 52.564,69.78 46.922,56.99 	"/>
+	
+		<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="474.7095" y1="64.8843" x2="496.854" y2="64.8843" gradientTransform="matrix(-1 0 0 1 654.7383 0)">
+		<stop  offset="0" style="stop-color:#4F4E4C"/>
+		<stop  offset="0.3573" style="stop-color:#424240"/>
+		<stop  offset="1" style="stop-color:#292929"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_17_)" points="160.941,31.151 175.262,35.007 180.029,64.884 180.029,98.617 157.884,69.78 
+		163.528,56.99 	"/>
+	<polygon fill="#9C0F2E" points="90.086,102.218 104.312,76.694 118.539,102.218 	"/>
+	<polygon fill="#9C0F2E" points="90.517,105.174 104.744,110.44 118.969,105.174 	"/>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" x1="80.055" y1="130.154" x2="81.073" y2="128.925"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.1844,2.6536" x1="82.765" y1="126.881" x2="93.088" y2="114.413"/>
+			<polyline fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" points="93.935,113.392 94.953,112.162 
+				93.532,111.437 			"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.6774,3.0645" x1="90.802" y1="110.043" x2="86.163" y2="107.674"/>
+			<polyline fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" points="84.797,106.978 83.375,106.252 
+				84.159,104.861 			"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.3371,2.7809" x1="85.523" y1="102.438" x2="102.847" y2="71.661"/>
+			<polyline fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" points="103.529,70.449 104.312,69.059 
+				105.119,70.436 			"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.2667,2.7223" x1="106.494" y1="72.785" x2="123.958" y2="102.622"/>
+			<polyline fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" points="124.646,103.797 125.453,105.174 
+				124.018,105.873 			"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.3072,2.756" x1="121.541" y1="107.082" x2="117.331" y2="109.136"/>
+			<polyline fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" points="116.092,109.74 114.658,110.44 
+				115.579,111.743 			"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.4488,2.874" x1="117.237" y1="114.09" x2="127.355" y2="128.407"/>
+			
+				<line fill="none" stroke="#9C0F2E" stroke-width="1.4779" stroke-miterlimit="10" x1="128.184" y1="129.58" x2="129.105" y2="130.884"/>
+		</g>
+	</g>
+	<circle fill="#FFFFFF" cx="104.312" cy="93.151" r="3.55"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" x1="61.639" y1="140.889" x2="60.685" y2="142.168"/>
+				
+					<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.1835,2.6529" points="
+					59.098,144.294 52.564,153.051 13.903,178.182 				"/>
+				<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" points="12.791,178.904 11.453,179.775 
+					12.182,178.355 				"/>
+				<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.264,2.72" points="
+					13.424,175.935 36.546,130.884 49.508,118.998 58.531,100.952 				"/>
+				
+					<line fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" x1="59.139" y1="99.736" x2="59.853" y2="98.309"/>
+			</g>
+		</g>
+		<g>
+			<path fill="none" d="M63.178,177.928"/>
+		</g>
+		<g>
+			<path fill="none" d="M22.547,205.831"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" x1="149.701" y1="140.889" x2="150.655" y2="142.168"/>
+				
+					<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.1834,2.6528" points="
+					152.242,144.294 158.775,153.051 197.435,178.182 				"/>
+				<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" points="198.547,178.904 199.885,179.775 
+					199.157,178.355 				"/>
+				<polyline fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" stroke-dasharray="3.264,2.72" points="
+					197.914,175.935 174.792,130.884 161.831,118.998 152.807,100.952 				"/>
+				
+					<line fill="none" stroke="#666665" stroke-width="1.4779" stroke-miterlimit="10" x1="152.199" y1="99.736" x2="151.485" y2="98.309"/>
+			</g>
+		</g>
+	</g>
+	<polyline fill="none" stroke="#EBEBEB" stroke-width="1.4437" stroke-miterlimit="10" stroke-dasharray="3.1178,2.5981" points="
+		104.312,121.601 96.8,128.814 96.8,160.896 92.871,198.698 	"/>
+	<polyline fill="none" stroke="#EBEBEB" stroke-width="1.4437" stroke-miterlimit="10" stroke-dasharray="3.1178,2.5981" points="
+		104.312,121.601 111.825,128.814 111.825,160.896 115.753,198.698 	"/>
+	<circle fill="#FFFFFF" cx="67.283" cy="135.095" r="6.338"/>
+	<circle fill="#FFFFFF" cx="143.572" cy="135.095" r="6.338"/>
+</g>
+</svg>

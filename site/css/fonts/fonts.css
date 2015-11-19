@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family:"RupsterScript";
+    src:url("rupster_script_free-webfont.eot");
+    src:url("rupster_script_free-webfont.eot?#iefix") format("embedded-opentype"),
+        url("rupster_script_free-webfont.woff2") format("woff2"),
+        url("rupster_script_free-webfont.woff") format("woff"),
+        url("rupster_script_free-webfont.ttf") format("truetype"),
+        url("rupster_script_free-webfont.svg#RupsterScript") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"CharterBlackC";
+    src:url("charterblackc-webfont.eot");
+    src:url("charterblackc-webfont.eot?#iefix") format("embedded-opentype"),
+        url("charterblackc-webfont.woff2") format("woff2"),
+        url("charterblackc-webfont.woff") format("woff"),
+        url("charterblackc-webfont.ttf") format("truetype"),
+        url("charterblackc-webfont.svg#CharterBlackC") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"CharterBlackC-Italic";
+    src:url("charterblackc-italic-webfont.eot");
+    src:url("charterblackc-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("charterblackc-italic-webfont.woff2") format("woff2"),
+        url("charterblackc-italic-webfont.woff") format("woff"),
+        url("charterblackc-italic-webfont.ttf") format("truetype"),
+        url("charterblackc-italic-webfont.svg#CharterBlackC-Italic") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"CharterC";
+    src:url("charterc-webfont.eot");
+    src:url("charterc-webfont.eot?#iefix") format("embedded-opentype"),
+        url("charterc-webfont.woff2") format("woff2"),
+        url("charterc-webfont.woff") format("woff"),
+        url("charterc-webfont.ttf") format("truetype"),
+        url("charterc-webfont.svg#CharterC") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"CharterC-Italic";
+    src:url("charterc-italic-webfont.eot");
+    src:url("charterc-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("charterc-italic-webfont.woff2") format("woff2"),
+        url("charterc-italic-webfont.woff") format("woff"),
+        url("charterc-italic-webfont.ttf") format("truetype"),
+        url("charterc-italic-webfont.svg#CharterC-Italic") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"CharterC-Bold";
+    src:url("charterc-bold-webfont.eot");
+    src:url("charterc-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("charterc-bold-webfont.woff2") format("woff2"),
+        url("charterc-bold-webfont.woff") format("woff"),
+        url("charterc-bold-webfont.ttf") format("truetype"),
+        url("charterc-bold-webfont.svg#CharterC-Bold") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -50,7 +50,7 @@ gulp.task('sass', function() {
         })
     ];
 
-    return sass('src/sass/*.sass', {
+    return sass(['src/sass/*.sass', 'src/sass/*.scss'], {
         sourcemap: true,
         style: 'compact'
     })

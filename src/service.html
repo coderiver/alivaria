@@ -1,0 +1,376 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Alivaria</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <link rel="SHORTCUT ICON" type="image/x-icon" href="img/elements/favicon.ico"> 
+        <link rel="icon" type="image/vnd.microsoft.icon" href="img/elements/favicon.ico">
+        
+        <link href="css/fonts/fonts.css" rel="stylesheet" type="text/css">
+        <link href="css/style-pack.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        
+        <script src="js/jquery-1.11.1-pack.js" type="text/javascript"></script>
+        <script src="js/script-pack.js" type="text/javascript"></script>
+        <script src="js/record-rtc.js" type="text/javascript"></script>
+        <script src="js/fileupload.js" type="text/javascript"></script>
+        
+        <script src="js/site.js" type="text/javascript"></script>
+        
+        <!--[if IE]>
+            <link href="css/ie.css" rel="stylesheet" type="text/css">
+            <script src="js/support/html5shiv.js" type="text/javascript"></script>
+            <script src="js/support/selectivizr.js" type="text/javascript"></script>
+        <![endif]-->
+		
+    </head>
+    
+    <body class="_service">
+        
+        <div id="preloader">
+        	<div class="middle">
+        		<div class="label">Подождите, идет загрузка...</div>
+            </div><!-- [ middle ] -->
+        </div><!-- [ preloader ] -->
+        
+        <!-- [> PAGE <] -->
+        <div id="page">
+            
+            <!-- [> HEADER <] -->
+            <header class="main">
+                <a class="logo" href="index.html"></a>
+                <a class="brand _1" href="#"></a>
+            </header><!-- [ main ] -->
+            <!-- [> HEADER <] -->
+            
+            <!-- [> CONTENT <] -->
+            <section class="content">
+                <div class="service">
+                    <div class="editor">
+                        <div id="scene"></div>
+                    	<div class="loader">
+                        	<div class="align">
+                                <div class="middle">
+                                    <span class="label">0%</span>
+                                    <span class="progress"></span>
+                                </div><!-- [ middle ] -->
+                            </div><!-- [ align ] -->
+                        </div><!-- [ loader ] -->
+                        
+                        <button class="player"></button>
+                        <button class="remove">Выдаліць</button>
+                        
+                        <div class="form-upload-photo">
+                            <form id="form-upload-photo" action="#" method="post" enctype="multipart/form-data">
+                                <div class="wrap">
+                                	<button class="upload" type="button"></button>
+                                    <div class="demands">
+                                        <p>Фарматы - jpg, png, gif<br>Памер на больш за 10Mb</p>
+                                    </div><!-- [ demands ] -->
+                                </div><!-- [ wrap ] -->
+                            </form><!-- [ form-upload-photo ] -->
+                        </div><!-- [ form-upload-photo ] -->
+                        
+                        <div class="stage" data-step="1.0">
+                            <aside class="left">
+                                <div class="instruction">
+                                    <p>Выберыце пазіцыю фатаграфіі</p>
+                                </div><!-- [ instruction ] -->
+                                <button class="next" data-step="1.1">далей</button>
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="1.1">
+                            <aside class="left">
+                                <div class="instruction">
+                                    <p>Выберыце лепшы кадр</p>
+                                </div><!-- [ instruction ] -->
+                                <button class="next" data-step="1.2">далей</button>
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="1.2">
+                            <aside class="left">
+                                <div class="instruction">
+                                    <p>Дадайце калядныя маскі</p>
+                                </div><!-- [ instruction ] -->
+                                <button class="next" data-step="2.0">далей</button>
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="2.0">
+                            <aside class="left">
+                                <div class="instruction">
+                                    <p>Адкажыце на пытанне і дадайце калядную зорку</p>
+                                </div><!-- [ instruction ] -->
+                                <button class="next" data-step="3.0">далей</button>
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                                <div class="title">Якое стаўленне да традыцый вам падабаецца?</div>
+                                <label><input class="star" name="star" type="radio" value="1">Традыцыі не павінны змяняцца нават з цягам часу.</label>
+                                <label><input class="star" name="star" type="radio" value="2">Пасля выпрабавання часам традыцыі могуць нязначна змяняцца.</label>
+                                <label><input class="star" name="star" type="radio" value="3">Традыцыі павінны жыць і ўвесь час развівацца і дапаўняцца.</label>
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="3.0">
+                            <aside class="left">
+                                <div class="instruction">
+                                    <p>Абярыце адну з песень для каляднага віншавання. Пры жаданні можаце нават спець!</p>
+                                </div><!-- [ instruction ] -->
+                                <button class="next" data-step="4.0">далей</button>
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                                <div class="songs-list">
+                                    <div class="item" data-index="1">
+                                        <label>
+                                            <input class="song" name="song" type="radio" value="1" checked>
+                                            <a class="player-link" href="audio/1-1.mp3">О-го-го, коза</a>
+                                            <span class="label">О-го-го, коза</span>
+                                        </label>
+                                    </div><!-- [ item ] -->
+                                    <div class="item" data-index="2">
+                                        <label>
+                                            <input class="song" name="song" type="radio" value="2">
+                                            <a class="player-link" href="audio/2-1.mp3">Колядо</a>
+                                            <span class="label">Колядо</span>
+                                        </label>
+                                    </div><!-- [ item ] -->
+                                    <div class="item" data-index="3">
+                                        <label>
+                                            <input class="song" name="song" type="radio" value="3">
+                                            <a class="player-link" href="audio/3-1.mp3">Новая навіна</a>
+                                            <span class="label">Новая навіна</span>
+                                        </label>
+                                    </div><!-- [ item ] -->
+                                    <div class="item" data-index="4">
+                                        <label>
+                                            <input class="song" name="song" type="radio" value="4">
+                                            <a class="player-link" href="audio/4-1.mp3">Ішла каляда</a>
+                                            <span class="label">Ішла каляда</span>
+                                        </label>
+                                    </div><!-- [ item ] -->
+                                    <div class="item custom">
+                                        <label>
+                                            <input class="song" name="song" type="radio" value="5">
+                                            <a class="player-link" href="#">Свой запiс</a>
+                                            <span class="label">Свой запiс</span>
+                                        </label>
+                                    </div><!-- [ item ] -->
+                                </div><!-- [ sound-track ] -->
+                                <button class="create-song" data-popup="custom-sound">Жадаю праспяваць</button>
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="4.0">
+                            <aside class="left">
+                            </aside><!-- [ left ] -->
+                            <aside class="right">
+                                <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем, каб дапамагчы светлым сілам атрымаць перамогу над цёмнымі!</p>
+                                <p>Збірайце ў падзяку «падабайкі» і стварайце свае калядныя традыцыі!</p> 
+                                <nav class="social">
+                                    <a class="fb" href="#"></a>
+                                    <a class="vk" href="#"></a>
+                                    <a class="ok" href="#"></a>
+                                </nav><!-- [ social ] -->
+                            </aside><!-- [ right ] -->
+                        </div><!-- [ stage ] -->
+                    </div><!-- [ editor ] -->
+                    
+                    <nav class="progress">
+                        <span class="enable active" data-stage="1"></span>
+                        <span class="disable" data-stage="2"></span>
+                        <span class="disable" data-stage="3"></span>
+                        <span class="disable" data-stage="4"></span>
+                    </nav><!-- [ progress ] -->
+                    
+                    <div class="description">
+                        <div class="item" data-stage="1">
+                            <p>
+                                Чалавек, які апрануў маску, ужо лічыўся не самім сабою<br>
+                                і мог дазволіць сабе нашмат больш, чым было заведзена.<br>
+                                У кожнай маскі было сваё значэнне. Мядзведзь лічыўся ўвасабленнем Велеса,<br>
+                                каза – сімвалам дабрабыту, а бусел – сімвалам удачы і ладу.
+                            </p>
+                        </div><!-- [ item ] -->
+                        <div class="item" data-stage="2">
+                            <p>
+                                Калядная зорка – гэта мадэль будовы свету. У ёй спляліся дзве літары<br>
+                                арнаментальнага алфавіту - крыж і ромб. Беларусы верылі, што зорка дапамагае<br>
+                                Сонцу перамагчы Цемру. Бо толькі пасля добрага калядавання<br>
+                                дзень пачынаў павялічвацца, а ноч скарачацца.
+                            </p>
+                        </div><!-- [ item ] -->
+                        <div class="item" data-stage="3">
+                            <p>
+                                Новае сонца нараджалася разам з каляднымі спевамі.<br>
+                                Яны дапамагалі напалохаць нячысцікаў, што вылезлі з таго свету.<br>
+                                Чым часцей узгадваліся розныя песні, тым больш<br>
+                                дзейснымі яны лічыліся.
+                            </p>
+                        </div><!-- [ item ] -->
+                    </div><!-- [ description ] -->
+                </div><!-- [ service ] -->
+                
+            </section><!-- [ content ] -->
+            <!-- [> CONTENT <] -->
+            
+        </div><!-- [ page ] -->
+        <!-- [> PAGE <] -->
+        
+        <!-- [> HIDDEN <] -->
+        <div class="hidden">
+            <input id="file-photo" type="file">
+            
+            <div class="popup" data-name="custom-sound">
+                <div class="align">
+                    <div class="middle">
+                        <div class="window">
+                            <button class="close"></button>
+                            <div class="container">
+                                <div class="soundtrack">
+                                    <div class="title">
+                                        <div class="item active" data-index="1">О-го-го, коза</div>
+                                        <div class="item" data-index="2">Колядо</div>
+                                        <div class="item" data-index="3">Новая навіна</div>
+                                        <div class="item" data-index="4">Ішла каляда</div>
+                                    </div><!-- [ title ] -->
+                                    
+                                    <div class="creation">
+                                        <div class="step _1 active">
+                                            <button class="start"></button>
+                                        </div><!-- [ step ] -->
+                                        
+                                        <div class="step _2">
+                                            <button class="cancel">адмяніць</button>
+                                        </div><!-- [ step ] -->
+                                        
+                                        <div class="step _3">
+                                            <button class="save">гатова</button>
+                                            <button class="again">перазапісаць</button>
+                                        </div><!-- [ step ] -->
+                                        
+                                        <div class="music-player sm2-bar-ui" data-name="player-custom-music">
+                                        	<button class="play"></button>
+                                        	<button class="stop"></button>
+                                            <div class="bd sm2-main-controls">
+                                                <div class="sm2-inline-element sm2-button-element">
+                                                    <div class="sm2-button-bd">
+                                                        <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+                                                    </div><!-- [ sm2-button-bd ] -->
+                                                </div><!-- [ sm2-inline-element ] -->
+                                                
+                                                <div class="sm2-inline-element sm2-inline-status">
+                                                    <div class="sm2-playlist">
+                                                        <div class="sm2-playlist-target"></div>
+                                                    </div><!-- [ sm2-playlist ] -->
+                                                    
+                                                    <div class="sm2-progress">
+                                                        <div class="sm2-row">
+                                                            <div class="sm2-inline-time">0:00</div>
+                                                            <div class="sm2-progress-bd">
+                                                                <div class="sm2-progress-track">
+                                                                    <div class="sm2-progress-bar"></div>
+                                                                    <div class="sm2-progress-ball">
+                                                                        <div class="icon-overlay"></div>
+                                                                    </div><!-- [ sm2-progress-ball ] -->
+                                                                </div><!-- [ sm2-progress-track ] -->
+                                                            </div><!-- [ sm2-progress-bd ] -->
+                                                            <div class="sm2-inline-duration">0:00</div>
+                                                        </div><!-- [ sm2-row ] -->
+                                                    </div><!-- [ sm2-progress ] -->
+                                                </div><!-- [ sm2-inline-status ] -->
+                                                
+                                                <div class="sm2-inline-element sm2-button-element sm2-volume">
+                                                    <div class="sm2-button-bd">
+                                                        <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+                                                        <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+                                                    </div><!-- [ sm2-button-bd ] -->
+                                                </div><!-- [ sm2-volume ] -->
+                                                
+                                                <div class="sm2-inline-element sm2-button-element sm2-menu">
+                                                    <div class="sm2-button-bd">
+                                                        <a href="#menu" class="sm2-inline-button menu">menu</a>
+                                                    </div><!-- [ sm2-button-bd ] -->
+                                                </div><!-- [ sm2-menu ] -->
+                                            </div><!-- [ sm2-main-controls ] -->
+                                            
+                                            <div class="bd sm2-playlist-drawer sm2-element">
+                                                <div class="sm2-inline-texture">
+                                                    <div class="sm2-box-shadow"></div>
+                                                </div><!-- [ sm2-inline-texture ] -->
+                                                
+                                                <div class="sm2-playlist-wrapper">
+                                                    <ul class="sm2-playlist-bd">
+                                                        <li><a href="/audio/1-2.mp3">О-го-го, коза</a></li>
+                                                        <li><a href="/audio/2-2.mp3">Колядо</a></li>
+                                                        <li><a href="/audio/3-2.mp3">Новая навіна</a></li>
+                                                        <li><a href="/audio/4-2.mp3">Ішла каляда</a></li>
+                                                    </ul><!-- [ sm2-playlist-bd ] -->
+                                                </div><!-- [ sm2-playlist-wrapper ] -->
+                                                
+                                                <div class="sm2-extra-controls">
+                                                    <div class="bd">
+                                                        <div class="sm2-inline-element sm2-button-element">
+                                                            <a href="#prev" title="Previous" class="sm2-inline-button previous">&lt; previous</a>
+                                                        </div><!-- [ sm2-button-element ] -->
+                                                        <div class="sm2-inline-element sm2-button-element">
+                                                            <a href="#next" title="Next" class="sm2-inline-button next">&gt; next</a>
+                                                        </div><!-- [ sm2-button-element ] -->
+                                                    </div><!-- [ bd ] -->
+                                                </div><!-- [ sm2-extra-controls ] -->
+                                            </div><!-- [ sm2-playlist-drawer ] -->
+                                        </div><!-- [ music-player ] -->
+                                    </div><!-- [ creation ] -->
+                                    
+                                    <div class="text">
+                                        <div class="item active" data-index="1">
+                                        	<p>О, го-го, коза, о-го-го, шэра.<br>Не ходзі коза жы ў чыстае поле.</p>
+                                            <p>О, го-го, коза, жы о-го-го, шэра.<br>У чыстому полю жы там жыто расьце.</p>
+                                            <p>О, го-го, коза, жы о-го-го, шэра.<br>Дзе коза рогомы - там жыто стагом.</p>
+                                            <p>О, го-го, коза, жы о-го-го, шэра.<br>Дзе коза топ-топы -  там жыто сем коп.</p>
+                                            <p>О, го-го, коза, жы о-го-го, шэра.<br>Не ходзі коза жы ў чыстое поле.</p>
+                                            <p>О, го-го, коза, жы  о-го-го, шэра.<br>Поклонісь коза хозяіну в ногі.</p>
+                                        </div><!-- [ item ] -->
+                                        <div class="item" data-index="2">
+                                            <p>Колядо! Бэгла колядка пэшком, пэшком, гэй! Колядо!</p>
+                                            <p>Колядо! Нэсла пірожкі мэшком, мэшком, гэй! Колядо!</p>
+                                            <p>Колядо! Дай забегла до Стэпана, гэй! Колядо!</p>
+                                            <p>Колядо! Ад Стэпана до Дэм’яна, гэй! Колядо!</p>
+                                            <p>Колядо! Ад Дэм’яна выйшла п’яна, гэй! Колядо!</p>
+                                        </div><!-- [ item ] -->
+                                        <div class="item" data-index="3">
+                                            <p>Новая навіна<br>Родзіць панна сына<br>Нарадзіла ў Бэтлееме<br>Марыя едзіна</p>
+                                            <p>На руках трымала<br>Рэч яму сьпявала<br>Сама своім створыцелем<br>Яго называла</p>
+                                            <p>Люлі-люлі сынку<br>Люлі-люлі сынку<br>Дзе сам едзеш бяры мяне<br>За мамку едынку</p>
+                                        </div><!-- [ item ] -->
+                                        <div class="item" data-index="4">
+                                            <p>Ішла каляда калядуючы, каледа-калядзіца!</p>
+                                            <p>Шла дзярэўняй ды й жабруючы, каледа-калядзіца!</p>
+                                            <p>Дары дзеванька, дары малада, каледа-калядзіца!</p>
+                                            <p>Рэшата аўса, наверх каўбаса, каледа-калядзіца!</p>
+                                        </div><!-- [ item ] -->
+                                    </div><!-- [ text ] -->
+                                </div><!-- [ soundtrack ] -->
+                            </div><!-- [ container ] -->
+                        </div><!-- [ window ] -->
+                    </div><!-- [ middle ] -->
+                </div><!-- [ align ] -->
+                <div class="overlay"></div>
+            </div><!-- [ popup ] -->
+            
+        </div><!-- [ hidden ] -->
+        <!-- [> HIDDEN <] -->
+        
+    </body>
+</html>
+        
