@@ -1,5 +1,6 @@
 
-var base_path = '/ipasechny/alivaria';
+// var base_path = '/ipasechny/alivaria';
+var base_path = '';
 
 var sounds = {
 	1: {src: [base_path + '/audio/1-1.mp3', base_path + '/audio/1-2.mp3'], time: 59},

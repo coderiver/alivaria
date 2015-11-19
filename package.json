@@ -12,6 +12,7 @@
     "browser-sync": "~2.9.3",
     "css-mqpacker": "^4.0.0",
     "gulp": "~3.9.0",
+    "gulp-connect-php": "0.0.7",
     "gulp-consolidate": "^0.1.2",
     "gulp-copy": "0.0.2",
     "gulp-iconfont": "^5.0.0",

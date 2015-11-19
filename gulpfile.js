@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     spritesmith = require('gulp.spritesmith'),
     browserSync = require("browser-sync"),
+    connect = require('gulp-connect-php'),
     iconfont = require("gulp-iconfont"),
     consolidate = require("gulp-consolidate"),
     rimraf = require('rimraf'),
@@ -189,13 +190,16 @@ gulp.task('font', function(){
 
 
 //webserver
-gulp.task('browser-sync', function() {
+gulp.task('php', function() {
+    connect.server({ base: dest.root, port: 8010, keepalive: true});
+});
+gulp.task('browser-sync', ['php'], function() {
     browserSync({
-        server: {
-            baseDir: dest.root,
-            // directory: true,
-            // index: 'index.html'
-        },
+        // server: {
+        //     // directory: true,
+        //     // index: 'index.html'
+        // },
+        proxy: '127.0.0.1:8010',
         files: [dest.html + '/*.html', dest.css + '/*.css', dest.js + '/*.js'],
         port: 8080,
         notify: false,
@@ -204,6 +208,7 @@ gulp.task('browser-sync', function() {
         open: true
     });
 });
+
 
 gulp.task('watch', function() {
     gulp.watch(src.sass + '/**/*', ['sass']);
