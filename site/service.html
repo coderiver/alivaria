@@ -42,7 +42,7 @@
             <!-- [> HEADER <] -->
             <header class="main">
                 <a class="logo" href="index.html"></a>
-                <a class="brand _1" href="#"></a>
+                <a class="brand _2" href="#"></a>
             </header><!-- [ main ] -->
             <!-- [> HEADER <] -->
             
@@ -76,21 +76,26 @@
                         
                         <div class="stage" data-step="1.0">
                             <aside class="left">
+                                <div class="btn-group">
+                                    <button class="next" data-step="1.1">далей</button>
+                                </div>
                                 <div class="instruction">
                                     <p>Выберыце пазіцыю фатаграфіі</p>
                                 </div><!-- [ instruction ] -->
-                                <button class="next" data-step="1.1">далей</button>
                             </aside><!-- [ left ] -->
                             <aside class="right">
                             </aside><!-- [ right ] -->
                         </div><!-- [ stage ] -->
                         
                         <div class="stage" data-step="1.1">
-                            <aside class="left">
+                            <aside class="left left_mod clearfix">
+                                <div class="btn-group">
+                                    <button class="next" data-step="1.2">Зрабіць</button>
+                                    <button class="next" data-step="1.2">Запампаваць</button>
+                                </div>
                                 <div class="instruction">
                                     <p>Бяром калядны фотаздымак</p>
                                 </div><!-- [ instruction ] -->
-                                <button class="next" data-step="1.2">далей</button>
                             </aside><!-- [ left ] -->
                             <aside class="right">
                             </aside><!-- [ right ] -->
@@ -98,10 +103,13 @@
                         
                         <div class="stage" data-step="1.2">
                             <aside class="left">
+                                <div class="btn-group">
+                                    <button class="next" data-step="2.0">далей</button>
+                                </div>
                                 <div class="instruction">
-                                    <p>Дадайце калядныя маскі</p>
+                                     <p>Выберыце найлепшы кадр <br>
+                                       Дадайце калядныя маскi</p>
                                 </div><!-- [ instruction ] -->
-                                <button class="next" data-step="2.0">далей</button>
                             </aside><!-- [ left ] -->
                             <aside class="right">
                             </aside><!-- [ right ] -->
@@ -109,10 +117,12 @@
                         
                         <div class="stage" data-step="2.0">
                             <aside class="left">
+                                <div class="btn-group">
+                                    <button class="next" data-step="3.0">далей</button>
+                                </div>
                                 <div class="instruction">
                                     <p>Адкажыце на пытанне і дадайце калядную зорку</p>
                                 </div><!-- [ instruction ] -->
-                                <button class="next" data-step="3.0">далей</button>
                             </aside><!-- [ left ] -->
                             <aside class="right">
                                 <div class="title">Якое стаўленне да традыцый вам падабаецца?</div>
@@ -124,46 +134,35 @@
                         
                         <div class="stage" data-step="3.0">
                             <aside class="left">
+                                <div class="btn-group">
+                                    <button class="next" data-step="4.0">Хачу праспяваць</button>
+                                </div>
                                 <div class="instruction">
-                                    <p>Абярыце адну з песень для каляднага віншавання. Пры жаданні можаце нават спець!</p>
+                                    <p>Абярыце адну з песень для каляднага віншавання. Пры жаданні можаце нават праспяваць!</p>
                                 </div><!-- [ instruction ] -->
-                                <button class="next" data-step="4.0">далей</button>
                             </aside><!-- [ left ] -->
                             <aside class="right">
                                 <div class="songs-list">
+                                    <div class="title">Націсніце, каб пачаць запіс</div>
                                     <div class="item" data-index="1">
                                         <label>
                                             <input class="song" name="song" type="radio" value="1" checked>
-                                            <a class="player-link" href="audio/1-1.mp3">О-го-го, коза</a>
-                                            <span class="label">О-го-го, коза</span>
+                                            <a class="player-link" href="audio/1-1.mp3">Скасаваць</a>
+                                            <span class="label">Скасаваць</span>
                                         </label>
                                     </div><!-- [ item ] -->
                                     <div class="item" data-index="2">
                                         <label>
                                             <input class="song" name="song" type="radio" value="2">
-                                            <a class="player-link" href="audio/2-1.mp3">Колядо</a>
-                                            <span class="label">Колядо</span>
+                                            <a class="player-link" href="audio/2-1.mp3">Гатова</a>
+                                            <span class="label">Гатова</span>
                                         </label>
                                     </div><!-- [ item ] -->
                                     <div class="item" data-index="3">
                                         <label>
                                             <input class="song" name="song" type="radio" value="3">
-                                            <a class="player-link" href="audio/3-1.mp3">Новая навіна</a>
-                                            <span class="label">Новая навіна</span>
-                                        </label>
-                                    </div><!-- [ item ] -->
-                                    <div class="item" data-index="4">
-                                        <label>
-                                            <input class="song" name="song" type="radio" value="4">
-                                            <a class="player-link" href="audio/4-1.mp3">Ішла каляда</a>
-                                            <span class="label">Ішла каляда</span>
-                                        </label>
-                                    </div><!-- [ item ] -->
-                                    <div class="item custom">
-                                        <label>
-                                            <input class="song" name="song" type="radio" value="5">
-                                            <a class="player-link" href="#">Свой запiс</a>
-                                            <span class="label">Свой запiс</span>
+                                            <a class="player-link" href="audio/3-1.mp3">Перазапісаць</a>
+                                            <span class="label">Перазапісаць</span>
                                         </label>
                                     </div><!-- [ item ] -->
                                 </div><!-- [ sound-track ] -->
@@ -175,8 +174,9 @@
                             <aside class="left">
                             </aside><!-- [ left ] -->
                             <aside class="right">
-                                <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем, каб дапамагчы светлым сілам атрымаць перамогу над цёмнымі!</p>
-                                <p>Збірайце ў падзяку «падабайкі» і стварайце свае калядныя традыцыі!</p> 
+                                <p>Ці гэта не цуд?</p>
+                                <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем, каб дапамагчы светлым сілам атрымаць перамогу над цёмнымі!  Збірайце ў падзяку “падабайкі“  і  стварайце свае калядныя традыцыі! </p>
+                                <p>Дзе будзем калядаваць?</p>
                                 <nav class="social">
                                     <a class="fb" href="#"></a>
                                     <a class="vk" href="#"></a>
@@ -196,26 +196,18 @@
                     <div class="description">
                         <div class="item" data-stage="1">
                             <p>
-                                Чалавек, які апрануў маску, ужо лічыўся не самім сабою<br>
-                                і мог дазволіць сабе нашмат больш, чым было заведзена.<br>
-                                У кожнай маскі было сваё значэнне. Мядзведзь лічыўся ўвасабленнем Велеса,<br>
-                                каза – сімвалам дабрабыту, а бусел – сімвалам удачы і ладу.
+                                Чалавек, які апрануў маску, ужо лічыўся не самім сабою і мог <br>дазволіць сабе нашмат больш, чым было заведзена. <br>
+                                У кожнай маскі было сваё значэнне. Мядзведзь лічыўся ўвасабленнем <br>Велеса, каза – сімвалам дабрабыту, а бусел – сімвалам удачы і ладу.
                             </p>
                         </div><!-- [ item ] -->
                         <div class="item" data-stage="2">
                             <p>
-                                Калядная зорка – гэта мадэль будовы свету. У ёй спляліся дзве літары<br>
-                                арнаментальнага алфавіту - крыж і ромб. Беларусы верылі, што зорка дапамагае<br>
-                                Сонцу перамагчы Цемру. Бо толькі пасля добрага калядавання<br>
-                                дзень пачынаў павялічвацца, а ноч скарачацца.
+                                Калядная зорка – гэта мадэль будовы свету. У ёй спляліся дзве літары арнаментальнага алфавіту – крыж і ромб. Беларусы верылі, што зорка дапамагае Сонцу перамагчы Цемру. Бо толькі пасля добрага калядавання дзень пачынаў павялічвацца, а ноч скарачацца. 
                             </p>
                         </div><!-- [ item ] -->
                         <div class="item" data-stage="3">
                             <p>
-                                Новае сонца нараджалася разам з каляднымі спевамі.<br>
-                                Яны дапамагалі напалохаць нячысцікаў, што вылезлі з таго свету.<br>
-                                Чым часцей узгадваліся розныя песні, тым больш<br>
-                                дзейснымі яны лічыліся.
+                                Новае сонца нараджалася разам з каляднымі спевамі. Яны дапамагалі напалохаць нячысцікаў, што вылезлі з таго свету. Чым часцей згадваліся розныя песні, тым больш дзейснымі яны лічыліся. 
                             </p>
                         </div><!-- [ item ] -->
                     </div><!-- [ description ] -->
@@ -239,10 +231,9 @@
                             <div class="container">
                                 <div class="soundtrack">
                                     <div class="title">
-                                        <div class="item active" data-index="1">О-го-го, коза</div>
-                                        <div class="item" data-index="2">Колядо</div>
-                                        <div class="item" data-index="3">Новая навіна</div>
-                                        <div class="item" data-index="4">Ішла каляда</div>
+                                        <div class="item active" data-index="1">Скасаваць</div>
+                                        <div class="item" data-index="2">Гатова</div>
+                                        <div class="item" data-index="3">Перазапісаць</div>
                                     </div><!-- [ title ] -->
                                     
                                     <div class="creation">

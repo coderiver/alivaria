@@ -200,7 +200,7 @@ section.content { margin: 0px auto; }
 .welcome { color: #fff; width: 500px; font-size: 18px; text-align: center; margin: -73px auto 0px; font-family: "CharterC"; }
 
 /*[Data <]*/
-.welcome .data { padding-top: 50px; }
+.welcome .data { padding-top: 50px; float: left; }
 
 .welcome .data p { line-height: 26px; margin: 15px 0px 0px; }
 
@@ -226,7 +226,7 @@ section.content { margin: 0px auto; }
 .product:after { clear: both; content: ""; display: block; }
 
 /*[Data <]*/
-.product .data { float: left; width: 470px; text-align: center; margin-right: 30px; }
+.welcome .data, .product .data { float: left; width: 470px; text-align: center; margin-right: 30px; }
 
 .product .data p { line-height: 26px; margin: 15px 0px 0px; }
 
@@ -242,13 +242,13 @@ section.content { margin: 0px auto; }
 
 /*[Title >]*/
 /*[Aside right <]*/
-.product aside.right { float: left; width: 250px; font-size: 13px; padding-top: 6px; }
+.welcome aside.right, .product aside.right { float: left; width: 250px; font-size: 13px; padding-top: 6px; }
 
-.product aside.right ol { margin: 0px; padding: 0px; list-style: none; }
+.welcome aside.right ol, .product aside.right ol { margin: 0px; padding: 0px; list-style: none; }
 
-.product aside.right ol li { margin-top: 15px; }
+.welcome aside.right ol li, .product aside.right ol li { margin-top: 15px; }
 
-.product aside.right ol li:first-child { margin-top: 0px; }
+.welcome aside.right ol li:first-child, .product aside.right ol li:first-child { margin-top: 0px; }
 
 /*[Aside right >]*/
 /*[Product >]*/
@@ -306,16 +306,20 @@ section.content { margin: 0px auto; }
 .service .editor .stage aside > :first-child { margin-top: 0px; }
 
 /*[Aside left <]*/
-.service .editor .stage aside.left { float: left; width: 562px; min-height: 85px; margin-top: 320px; padding-top: 15px; position: relative; }
+.service .editor .stage aside.left { float: left; width: 565px; min-height: 85px; margin-top: 320px; padding-top: 15px; position: relative; }
+
+.service .editor .stage aside.left .instruction { overflow: hidden; width: auto; margin-right: 20px; }
+.service .editor .stage aside.left .btn-group { float: right; }
+.service .editor .stage aside.left .btn-group button.next { display: inline-block; margin-left: 10px; position: static; }
 
 /*[Button next <]*/
-.service .editor .stage aside.left button.next { top: 15px; right: -2px; color: #fff; height: 35px; display: block; font-size: 14px; background: none; padding: 0px 25px; text-align: center; position: absolute; text-decoration: none; border: solid 2px #fff; text-transform: uppercase; -webkit-transition: all .2s ease; transition: all .2s ease; }
+.service .editor .stage aside.left button.next { color: #fff; height: 35px; display: block; font-size: 14px; background: none; padding: 0px 25px; text-align: center; text-decoration: none; border: solid 2px #fff; text-transform: uppercase; -webkit-transition: all .2s ease; transition: all .2s ease; }
 
 .service .editor .stage aside.left button.next:hover, .service .editor .stage aside.left button.next:active { border-color: #e34842; }
 
 /*[Button next >]*/
 /*[Instruction <]*/
-.service .editor .stage aside.left .instruction { width: 440px; }
+.service .editor .stage aside.left .instruction { width: auto; }
 
 .service .editor .stage aside.left .instruction > :last-child { margin-bottom: 0px; }
 
