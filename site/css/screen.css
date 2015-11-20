@@ -38,8 +38,16 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.i-logo-new { display: inline-block; background: url(../img/logo_kaliadnae.png) center bottom no-repeat; width: 150px; height: 70px; background-size: cover; }
+
+.m-logo { display: none; text-align: center; width: 100%; padding-bottom: 13px; position: relative; overflow: hidden; }
+.m-logo:before { content: ""; position: absolute; left: -100px; right: -100px; height: 300px; -webkit-border-radius: 100%; border-radius: 100%; background: url(../img/page-bg.png) center bottom no-repeat; top: -215px; }
+.m-logo a { z-index: 2; position: relative; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 767px){
+ .m-logo{ display: block; } }
 
 
 

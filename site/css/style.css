@@ -6,7 +6,7 @@
 
 ::selection { color: #000; background: #a4b1d4; }
 
-html, body { width: 100%; height: 100%; min-width: 980px; }
+html, body { width: 100%; height: 100%; }
 
 body { color: #fff; font-size: 16px; min-height: 800px; position: absolute; word-spacing: 0.05em; letter-spacing: 0.05em; -webkit-text-stroke: 0px; background-repeat: no-repeat; background-attachment: scroll; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; font-family: "CharterC", Arial, Helvetica, sans-serif; -webkit-font-smoothing: subpixel-antialiased !important; background: url(../img/elements/site/backgrounds/page/1.jpg) top center scroll no-repeat; -webkit-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
 
@@ -18,11 +18,11 @@ body._welcome {
 }*/
 body._result, body._service { /*background-image:url(../img/elements/site/backgrounds/page/2.jpg);*/ }
 
-#page { width: 980px; min-height: 100%; margin: 0px auto; min-width: 980px; position: relative; }
+#page { max-width: 1020px; min-height: 100%; margin: 0px auto; position: relative; }
 
 body._check #page, body._product #page, body._welcome #page { padding: 20px 0px 150px; }
 
-body._result #page, body._service #page { padding: 20px 0px; }
+body._result #page, body._service #page { padding: 20px; }
 
 /*[==Preloader <]*/
 #preloader { top: 0px; left: 0px; width: 100%; height: 100%; display: table; position: fixed; overflow: hidden; background: #fff; text-align: center; z-index: 1000000000; }
@@ -35,7 +35,7 @@ body._result #page, body._service #page { padding: 20px 0px; }
 
 /*[==Preloader >]*/
 /*[==Header main <]*/
-header.main { width: 980px; height: 100px; margin: 0px auto; position: relative; }
+header.main { max-width: 1000px; height: 100px; margin: 0px auto; position: relative; }
 
 header.main:after { clear: both; content: ""; display: block; }
 
@@ -44,13 +44,9 @@ header.main .logo { top: 0px; left: 0px; width: 140px; height: 100px; display: b
 
 /*[Logo >]*/
 /*[Brand <]*/
-header.main .brand._1 { top: 118px; right: 13px; width: 134px; height: 158px; display: block; position: absolute; background: url(../img/elements/site/single/beer-logo-1-1.png) center no-repeat; -webkit-transition: all .2s ease; transition: all .2s ease; z-index: 2; }
+header.main .brand._1 { top: 118px; right: -23px; width: 198px; height: 158px; display: block; position: absolute; background: url(../img/logo_kaliadnae.png) center bottom no-repeat; background-size: cover; -webkit-transition: all .2s ease; transition: all .2s ease; z-index: 2; }
 
-header.main .brand._1:hover, header.main .brand._1:active { background-image: url(../img/elements/site/single/beer-logo-1-2.png); }
-
-header.main .brand._2 { top: 1px; right: 80px; width: 224px; height: 78px; display: block; position: absolute; background: url(../img/elements/site/single/beer-logo-2-1.png) center no-repeat; -webkit-transition: all .2s ease; transition: all .2s ease; z-index: 2; }
-
-header.main .brand._2:hover, header.main .brand._2:active { background-image: url(../img/elements/site/single/beer-logo-2-2.png); }
+header.main .brand._2 { top: 1px; right: 80px; width: 224px; height: 85px; display: block; position: absolute; background: url(../img/logo_kaliadnae.png) center bottom no-repeat; background-size: cover; -webkit-transition: all .2s ease; transition: all .2s ease; z-index: 2; }
 
 /*[Brand >]*/
 /*[Nav social <]*/
@@ -78,7 +74,7 @@ header.main nav.social a:first-child { margin-left: 0px; }
 footer.main { left: 0px; bottom: 0px; width: 100%; position: absolute; padding-bottom: 25px; }
 
 /*[Wrap <]*/
-footer.main .wrap { width: 980px; margin: 0px auto; position: relative; }
+footer.main .wrap { max-width: 1000px; margin: 0px auto; position: relative; }
 
 footer.main .wrap:after { clear: both; content: ""; display: block; }
 
@@ -91,7 +87,7 @@ footer.main .wrap .beer .logo:hover, footer.main .wrap .beer .logo:active { back
 
 /*[Beer >]*/
 /*[Warning <]*/
-footer.main .wrap .warning { width: 980px; height: 84px; background: url(../img/elements/site/single/warning-1-1.png) center no-repeat; }
+footer.main .wrap .warning { max-width: 1000px; height: 84px; background: url(../img/elements/site/single/warning-1-1.png) center no-repeat; }
 
 /*[Warning >]*/
 /*[Wrap >]*/
@@ -255,7 +251,7 @@ section.content { margin: 0px auto; }
 /*[Aside right >]*/
 /*[Product >]*/
 /*[Checking <]*/
-.checking { width: 980px; padding-top: 63px; }
+.checking { max-width: 1000px; padding-top: 63px; }
 
 .checking .logo { width: 442px; height: 128px; display: block; margin: 0px auto 53px; position: relative; background: url(../img/elements/label.png) center no-repeat; text-align: center; }
 .checking .logo:before { content: ''; display: inline-block; margin-top: 10px; height: 115px; width: 175px; background: url(../img/logo_new.svg) center no-repeat; }
@@ -289,7 +285,7 @@ section.content { margin: 0px auto; }
 .service .editor { min-height: 405px; position: relative; }
 
 /*[Scene <]*/
-.service .editor #scene { top: -29px; left: -10px; width: 980px; height: 400px; position: absolute; }
+.service .editor #scene { top: -29px; left: -10px; width: 100%; max-width: 1000px; height: 400px; position: absolute; }
 
 /*[Scene >]*/
 /*[Stage <]*/
@@ -423,7 +419,7 @@ button.create-song:hover, button.create-song:active { background: #e34742; backg
 
 /*[Button remove >]*/
 /*[Form upload photo <]*/
-.form-upload-photo { top: 2px; left: 2px; width: 558px; z-index: 300; height: 318px; position: absolute; background: #e0e0e0; }
+.form-upload-photo { top: 2px; left: 2px; width: 57%; z-index: 300; height: 318px; position: absolute; background: #e0e0e0; }
 
 /*[Demands <]*/
 .form-upload-photo .demands { width: 100%; bottom: 20px; color: #1a2f3f; font-size: 14px; position: absolute; text-align: center; }
@@ -762,6 +758,9 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  body { -ms-background-size: cover; background-size: cover; } }
 @media screen and (max-width: 1150px) {
  nav.slider .item { font-size: 12px; } }
+@media only screen and (max-width: 767px) {
+ body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; }
+ .checking .logo { background: none; width: 100%; } }
 
 
 

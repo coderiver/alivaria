@@ -24,7 +24,7 @@ html,
 body {
 	width:100%;
 	height:100%;
-	min-width:980px;
+	// min-width:980px;
 }
 body {
 	color:#fff;
@@ -38,7 +38,7 @@ body {
 	background-attachment:scroll;
 	-webkit-text-size-adjust:none;
 	-webkit-font-smoothing:antialiased;
-    font-family:"CharterC", Arial, Helvetica, sans-serif;
+	font-family:"CharterC", Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing:subpixel-antialiased !important;
 	background:url(../img/elements/site/backgrounds/page/1.jpg) top center scroll no-repeat;
 	-webkit-backface-visibility:hidden;
@@ -46,7 +46,12 @@ body {
 	-ms-backface-visibility:hidden;
 	-o-backface-visibility:hidden;
 	backface-visibility:hidden;
+	@media only screen and (max-width: 767px) {
+		background:url(../img/m-bg.png) top center scroll no-repeat;
+		background-size: cover;
+	}
 }
+
 /*body._check,
 body._product,
 body._welcome {
@@ -59,10 +64,11 @@ body._service {
 }
 
 #page {
-	width:980px;
+	max-width:1020px;
+	// width: 100%;
 	min-height:100%;
 	margin:0px auto;
-	min-width:980px;
+	// min-width:980px;
 	position:relative;
 }
 body._check #page,
@@ -72,7 +78,7 @@ body._welcome #page {
 }
 body._result #page,
 body._service #page {
-	padding:20px 0px;
+	padding:20px;
 }
 
 /*[==Preloader <]*/
@@ -101,7 +107,7 @@ body._service #page {
 	display:inline-block;
 	letter-spacing:0.08em;
 	// text-transform:uppercase;
-    font-family:"CharterC-Bold";
+	font-family:"CharterC-Bold";
 }
 #preloader .middle .label:after {
 	left:0px;
@@ -117,7 +123,7 @@ body._service #page {
 
 /*[==Header main <]*/
 header.main {
-	width:980px;
+	max-width:1000px;
 	height:100px;
 	margin:0px auto;
 	position:relative;
@@ -142,44 +148,40 @@ header.main .logo {
 
 /*[Brand <]*/
 header.main .brand._1 {
-	top:118px;
-	right:13px;
-	width:134px;
-	height:158px;
-	display:block;
-	position:absolute;
-	background:url(../img/elements/site/single/beer-logo-1-1.png) center no-repeat;
-	-webkit-transition:all .2s ease;
-	-moz-transition:all .2s ease;
-	-ms-transition:all .2s ease;
-	-o-transition:all .2s ease;
-	transition:all .2s ease;
+	top: 118px;
+	right: -23px;
+	width: 198px;
+	height: 158px;
+	display: block;
+	position: absolute;
+	background: url(../img/logo_kaliadnae.png) center bottom no-repeat;
+	background-size: cover;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
 	z-index: 2;
 }
-header.main .brand._1:hover,
-header.main .brand._1:active {
-	background-image:url(../img/elements/site/single/beer-logo-1-2.png);
-}
+// header.main .brand._1:hover,
+// header.main .brand._1:active {
+// 	background-image:url(../img/elements/site/single/beer-logo-1-2.png);
+// }
 
 header.main .brand._2 {
-	top:1px;
-	right:80px;
-	width:224px;
-	height:78px;
-	display:block;
-	position:absolute;
-	background:url(../img/elements/site/single/beer-logo-2-1.png) center no-repeat;
-	-webkit-transition:all .2s ease;
-	-moz-transition:all .2s ease;
-	-ms-transition:all .2s ease;
-	-o-transition:all .2s ease;
-	transition:all .2s ease;
+	top: 1px;
+	right: 80px;
+	width: 224px;
+	height: 85px;
+	display: block;
+	position: absolute;
+	background: url(../img/logo_kaliadnae.png) center bottom no-repeat;
+	background-size: cover;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
 	z-index: 2;
 }
-header.main .brand._2:hover,
-header.main .brand._2:active {
-	background-image:url(../img/elements/site/single/beer-logo-2-2.png);
-}
+// header.main .brand._2:hover,
+// header.main .brand._2:active {
+// 	background-image:url(../img/elements/site/single/beer-logo-2-2.png);
+// }
 /*[Brand >]*/
 
 /*[Nav social <]*/
@@ -243,7 +245,7 @@ footer.main {
 
 /*[Wrap <]*/
 footer.main .wrap {
-	width:980px;
+	max-width:1000px;
 	margin:0px auto;
 	position:relative;
 }
@@ -284,7 +286,7 @@ footer.main .wrap .beer .logo:active {
 
 /*[Warning <]*/
 footer.main .wrap .warning {
-	width:980px;
+	max-width:1000px;
 	height:84px;
 	background:url(../img/elements/site/single/warning-1-1.png) center no-repeat;
 }
@@ -350,7 +352,7 @@ section.content {
 	line-height:24px;
 	background:#e0e0e0;
 	border:solid 2px #fff;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	box-shadow:5px 5px 22px 0px rgba(1,1,1,.5);
 }
 .popup .window .container p {
@@ -367,7 +369,7 @@ section.content {
 	text-align:center;
 	line-height:normal;
 	margin-bottom:20px;
-    font-family:"CharterC-Bold";
+	font-family:"CharterC-Bold";
 }
 .popup .window .container > :last-child {
 	margin-bottom:0px;
@@ -392,7 +394,7 @@ section.content {
 	text-align:center;
 	line-height:normal;
 	text-transform:uppercase;
-    font-family:"Geometria-Medium";
+	font-family:"Geometria-Medium";
 	background:url(../img/elements/site/button/remove-1-1.png) center no-repeat;
 	-webkit-transition:all .1s ease;
 	-moz-transition:all .1s ease;
@@ -512,7 +514,7 @@ section.content {
 	position:absolute;
 	margin-bottom:1px;
 	display:inline-block;
-    font-family:"CharterC";
+	font-family:"CharterC";
 }
 .sm2-bar-ui .sm2-inline-status .sm2-progress .sm2-inline-duration {
 	right:3px;
@@ -568,7 +570,7 @@ section.content {
 	font-size:18px;
 	text-align:center;
 	margin:-73px auto 0px;
-    font-family:"CharterC";
+	font-family:"CharterC";
 }
 
 /*[Data <]*/
@@ -629,7 +631,7 @@ section.content {
 	color:#fff;
 	width:750px;
 	font-size:18px;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	margin:-110px 0px 0px 220px;
 }
 .product:after {
@@ -703,7 +705,7 @@ section.content {
 
 /*[Checking <]*/
 .checking {
-	width:980px;
+	max-width:1000px;
 	padding-top:63px;
 }
 .checking .logo {
@@ -722,6 +724,10 @@ section.content {
 		width: 175px;
 		background:url(../img/logo_new.svg) center no-repeat;
 	}
+	@media only screen and (max-width: 767px) {
+		background: none;
+		width: 100%;
+	}
 }
 
 /*[Display <]*/
@@ -732,7 +738,7 @@ section.content {
 	color:#fff;
 	font-size:30px;
 	text-align:center;
-    font-family:"CharterC";
+	font-family:"CharterC";
 }
 .checking .display.active {
 	display:block;
@@ -747,7 +753,7 @@ section.content {
 	text-align:center;
 	position:relative;
 	margin:40px auto 0px;
-    font-family:"CharterC";
+	font-family:"CharterC";
 }
 .checking .options .button {
 	float:left;
@@ -766,7 +772,7 @@ section.content {
 	color:#fff;
 	font-size:30px;
 	text-align:center;
-    font-family:"CharterC";
+	font-family:"CharterC";
 }
 /*[Question >]*/
 
@@ -792,7 +798,8 @@ section.content {
 .service .editor #scene {
 	top:-29px;
 	left:-10px;
-	width:980px;
+	width: 100%;
+	max-width:1000px;
 	height:400px;
 	position:absolute;
 	// backg round:url(../www.png) 10px 29px no-repeat;
@@ -908,7 +915,7 @@ section.content {
 	font-size:20px;
 	line-height:24px;
 	margin-bottom:15px;
-    font-family:"CharterBlackC";
+	font-family:"CharterBlackC";
 }
 
 /*[Label <]*/
@@ -1009,7 +1016,7 @@ button.create-song {
 	position:relative;
 	line-height:normal;
 	background:#e34842;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-transform:uppercase;
 	padding:0px 0px 0px 50px;
 }
@@ -1066,7 +1073,7 @@ button.create-song:active {
 	color:#e34842;
 	display:block;
 	font-size:16px;
-    font-family:"RupsterScript";
+	font-family:"RupsterScript";
 }
 .service .editor .loader .align .middle .progress {
 	width:0%;
@@ -1109,7 +1116,7 @@ button.create-song:active {
 	font-size:16px;
 	line-height:20px;
 	text-align:center;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-shadow:1px 1px 3px rgba(1,1,1,.75);
 }
 .service .description .item {
@@ -1150,7 +1157,7 @@ button.create-song:active {
 .form-upload-photo {
 	top:2px;
 	left:2px;
-	width:558px;
+	width:57%;
 	z-index:300;
 	height:318px;
 	position:absolute;
@@ -1275,7 +1282,7 @@ button.create-song:active {
 	font-size:13px;
 	text-align:center;
 	text-indent:-9999px;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	background:url(../img/elements/copyright.png) 50% 25% no-repeat
 }
 /*[Copyright >]*/
@@ -1312,7 +1319,7 @@ button.create-song:active {
 	text-align:center;
 	line-height:normal;
 	margin-bottom:20px;
-    font-family:"CharterC-Bold";
+	font-family:"CharterC-Bold";
 }
 .soundtrack .title .item {
 	display:none;
@@ -1406,7 +1413,7 @@ button.create-song:active {
 	color:#5f5f5f;
 	font-size:14px;
 	background:#fff;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-transform:uppercase;
 	border:solid 2px #5f5f5f;
 	-webkit-transition:all .2s ease;
@@ -1444,7 +1451,7 @@ button.create-song:active {
 	position:absolute;
 	line-height:normal;
 	background:#8c8c8c;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-transform:uppercase;
 	-webkit-transition:all .2s ease;
 	-moz-transition:all .2s ease;
@@ -1699,7 +1706,7 @@ nav.progress span[data-stage="4"].active {
 	line-height:24px;
 	background:#e0e0e0;
 	border:solid 2px #fff;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	box-shadow:5px 5px 22px 0px rgba(1,1,1,.5);
 }
 .window .box p {
@@ -1715,7 +1722,7 @@ nav.progress span[data-stage="4"].active {
 	font-size:28px;
 	line-height:normal;
 	margin-bottom:20px;
-    font-family:"CharterC-Bold";
+	font-family:"CharterC-Bold";
 }
 .window .box > :last-child {
 	margin-bottom:0px;
@@ -1740,7 +1747,7 @@ nav.progress span[data-stage="4"].active {
 	text-align:center;
 	line-height:normal;
 	text-transform:uppercase;
-    font-family:"Geometria-Medium";
+	font-family:"Geometria-Medium";
 	background:url(../img/elements/site/button/remove-1-1.png) center no-repeat;
 	-webkit-transition:all .1s ease;
 	-moz-transition:all .1s ease;
@@ -1779,13 +1786,13 @@ nav.progress span[data-stage="4"].active {
 	float:right;
 }
 .bold {
-    font-family:"RedRing-Bold";
+	font-family:"RedRing-Bold";
 }
 .light {
-    font-family:"RedRing-Light";
+	font-family:"RedRing-Light";
 }
 .medium {
-    font-family:"RedRing-Medium";
+	font-family:"RedRing-Medium";
 }
 .align-left {
 	text-align:left;
@@ -1921,7 +1928,7 @@ button._1,
 	text-align:center;
 	text-decoration:none;
 	border:solid 2px #fff;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-transform:uppercase;
 }
 button._1:hover,
@@ -1942,7 +1949,7 @@ button._2,
 	text-align:center;
 	background:#e34842;
 	text-decoration:none;
-    font-family:"CharterC";
+	font-family:"CharterC";
 	text-transform:uppercase;
 	border:dotted 2px #f6be93;
 	outline:solid 2px #e34842;
