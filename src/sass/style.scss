@@ -132,11 +132,11 @@ header.main:after {
 header.main .logo {
 	top:0px;
 	left:0px;
-	width:116px;
+	width:140px;
 	height:100px;
 	display:block;
 	position:absolute;
-	background:url(../img/elements/logo-1.png) center no-repeat;
+	background:url(../img/logo_new.svg) center no-repeat;
 }
 /*[Logo >]*/
 
@@ -610,7 +610,15 @@ section.content {
 	height:102px;
 	display:block;
 	margin:10px auto;
-	background:url(../img/elements/site/single/slogan-1-1.png) center no-repeat;
+	background:url(../img/slogan.svg) center no-repeat;
+}
+.stage .slogan {
+	width: 350px;
+	height: 80px;
+	display: block;
+	margin: 10px auto;
+	background:url(../img/slogan.svg) left center no-repeat;
+	
 }
 /*[Slogan >]*/
 
@@ -663,7 +671,7 @@ section.content {
 	height:102px;
 	display:block;
 	margin:10px 0px 15px;
-	background:url(../img/elements/site/single/slogan-1-1.png) center no-repeat;
+	background:url(../img/slogan.svg) center no-repeat;
 }
 /*[Title >]*/
 
@@ -703,7 +711,17 @@ section.content {
 	height:128px;
 	display:block;
 	margin:0px auto 53px;
-	background:url(../img/elements/logo-2.png) center no-repeat;
+	position: relative;
+	background:url(../img/elements/label.png) center no-repeat;
+	text-align: center;
+	&:before {
+		content: '';
+		display: inline-block;
+		margin-top: 10px;
+		height: 115px;
+		width: 175px;
+		background:url(../img/logo_new.svg) center no-repeat;
+	}
 }
 
 /*[Display <]*/
