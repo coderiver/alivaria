@@ -760,7 +760,10 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  nav.slider .item { font-size: 12px; } }
 @media only screen and (max-width: 767px) {
  body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; }
- .checking .logo { background: none; width: 100%; } }
+ .checking { padding-top: 0; }
+ .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
+ .checking .options .button { display: block; float: none; margin: 0 auto; }
+ .checking .options .button + .button { float: none; margin-top: 20px; } }
 
 
 

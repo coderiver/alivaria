@@ -2,6 +2,12 @@
 /**
  * @author Ivan Pasechny <ipasechny@gmail.com>
 **/
+@mixin adptv {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 
 *,
 *:after,
@@ -46,7 +52,7 @@ body {
 	-ms-backface-visibility:hidden;
 	-o-backface-visibility:hidden;
 	backface-visibility:hidden;
-	@media only screen and (max-width: 767px) {
+	@include adptv {
 		background:url(../img/m-bg.png) top center scroll no-repeat;
 		background-size: cover;
 	}
@@ -707,6 +713,9 @@ section.content {
 .checking {
 	max-width:1000px;
 	padding-top:63px;
+	@include adptv {
+		padding-top: 0;
+	}
 }
 .checking .logo {
 	width:442px;
@@ -724,9 +733,10 @@ section.content {
 		width: 175px;
 		background:url(../img/logo_new.svg) center no-repeat;
 	}
-	@media only screen and (max-width: 767px) {
+	@include adptv {
 		background: none;
 		width: 100%;
+		margin-bottom: 20px;
 	}
 }
 
@@ -755,15 +765,25 @@ section.content {
 	margin:40px auto 0px;
 	font-family:"CharterC";
 }
+
 .checking .options .button {
 	float:left;
 	width:140px;
 	height:40px;
 	font-size:18px;
 	line-height:36px !important;
+	@include adptv {
+		display: block;
+		float: none;
+		margin: 0 auto;
+	}
 }
 .checking .options .button + .button {
 	float:right;
+	@include adptv {
+		float: none;
+		margin-top: 20px;
+	}
 }
 /*[Options >]*/
 
