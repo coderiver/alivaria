@@ -32,7 +32,7 @@ $(document).ready(function() {
 	$('.js-upload').on('click', function() {
 		var $parent = $(this).parents('.js-file'),
 			$input = $parent.find("input[type='file']");
-		$input.trigger('click');
+		$('#file-photo').trigger('click');
 	});
 
 });

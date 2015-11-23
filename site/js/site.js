@@ -352,11 +352,11 @@ $(function() {
 			
 			/*[===Begin <]*/
 			var stage = new Kinetic.Stage({
-				width: 990,
+				width: 320,
 				height: 400,
 				container: 'scene'
 			});
-			
+			stage.scale(1, 0.5);
 			/*[Set stage <]*/
 			var setStage = function(step) {
 				var stage = (step.toString()).split('.')[0];
@@ -374,6 +374,7 @@ $(function() {
 					
 					is_allowed_change_mask = true;
 					is_allowed_change_star = false;
+					$('.kineticjs-content').addClass('is-active');
 				};
 				
 				if (stage == 2) {

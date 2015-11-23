@@ -224,7 +224,7 @@ section.content { margin: 0px auto; }
 /*[Slogan >]*/
 /*[Welcome >]*/
 /*[Product <]*/
-.product { color: #fff; width: 750px; font-size: 18px; font-family: "CharterC"; margin: -110px 0px 0px 220px; }
+.product { color: #fff; max-width: 750px; font-size: 18px; font-family: "CharterC"; margin: -110px 0px 0px 220px; }
 
 .product:after { clear: both; content: ""; display: block; }
 
@@ -241,7 +241,7 @@ section.content { margin: 0px auto; }
 
 /*[Data >]*/
 /*[Title <]*/
-.product .title { width: 470px; height: 102px; display: block; margin: 10px 0px 15px; background: url(../img/slogan.svg) center no-repeat; }
+.product .title { max-width: 470px; height: 102px; display: block; margin: 10px 0px 15px; background: url(../img/slogan.svg) center no-repeat; }
 
 /*[Title >]*/
 /*[Aside right <]*/
@@ -388,9 +388,9 @@ button.create-song:hover, button.create-song:active { background: #e34742; backg
 /*[Aside >]*/
 /*[Stage >]*/
 /*[Loader <]*/
-.service .editor .loader { top: 2px; left: 2px; width: 560px; z-index: 500; height: 320px; display: none; background: #fff; text-align: center; position: absolute; }
+.service .editor .loader { top: 2px; left: 2px; width: 100%; max-width: 560px; z-index: 500; height: 320px; display: none; background: #fff; text-align: center; position: absolute; }
 
-.service .editor .loader .align { width: 560px; height: 320px; display: table; }
+.service .editor .loader .align { width: 100%; max-width: 560px; height: 320px; display: table; }
 
 .service .editor .loader .align .middle { display: table-cell; vertical-align: middle; }
 
@@ -766,7 +766,7 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
 @media screen and (max-width: 1150px) {
  nav.slider .item { font-size: 12px; } }
 @media only screen and (max-width: 767px) {
- body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; min-height: initial; }
+ body { background: url(../img/m-bg.png) top center scroll repeat; background-size: cover; min-height: initial; }
  body._check #page, body._product #page, body._welcome #page { padding-bottom: 45px; padding-top: 0; }
  body._result #page, body._service #page { padding: 0; }
  header.main { height: auto; text-align: center; margin-top: 15px; }
@@ -782,13 +782,23 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .welcome .data .button.m-button { display: inline-block; }
  .welcome .title { display: none; }
  .welcome .slogan { display: none; }
+ .product { margin: 0; }
  .welcome .data, .product .data { width: 100%; }
+ .product .data { padding: 0 20px; }
+ .product .title { margin-left: 20px; margin-right: 20px; }
+ .product aside.right { display: none; }
  .checking { padding-top: 0; }
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }
  .checking .options .button + .button { float: none; margin-top: 20px; }
- .service .editor #scene { display: none; }
- .form-upload-photo { display: none; }
+ .service .editor #scene { position: static; }
+ .service .editor #scene canvas { max-width: 100%; }
+ .service .editor .stage.active { display: none; }
+ .service .description { display: none; }
+ .kineticjs-content { display: none !important; }
+ .kineticjs-content.is-active { display: block !important; }
+ .form-upload-photo { width: 100%; background: none; }
+ .form-upload-photo .wrap { display: none; }
  nav.progress { display: none; } }
 
 
