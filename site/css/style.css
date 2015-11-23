@@ -725,6 +725,8 @@ a[href^="tel:"] { color: inherit; border: none !important; text-decoration: inhe
 
 .radio.checked { background-position: center bottom; }
 
+.warn__meta { font-family: "CharterC"; }
+
 /*[Radio >]*/
 /*[Button <]*/
 button, .button { border: none; outline: none; cursor: pointer; text-align: center; position: relative; white-space: nowrap; display: inline-block; text-decoration: none; vertical-align: middle; line-height: normal !important; }
@@ -759,7 +761,9 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
 @media screen and (max-width: 1150px) {
  nav.slider .item { font-size: 12px; } }
 @media only screen and (max-width: 767px) {
- body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; }
+ body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; min-height: initial; }
+ body._check #page, body._product #page, body._welcome #page { padding-bottom: 45px; padding-top: 0; }
+ footer.main { display: none; }
  .checking { padding-top: 0; }
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }

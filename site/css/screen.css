@@ -32,8 +32,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
-
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
@@ -44,10 +42,15 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .m-logo { display: none; text-align: center; width: 100%; padding-bottom: 13px; position: relative; overflow: hidden; }
 .m-logo:before { content: ""; position: absolute; left: -100px; right: -100px; height: 300px; -webkit-border-radius: 100%; border-radius: 100%; background: url(../img/page-bg.png) center bottom no-repeat; top: -215px; }
 .m-logo a { z-index: 2; position: relative; }
+
+.warn { display: none; position: absolute; bottom: 0; left: 0; right: 0; font: 0/0 a; text-shadow: none; color: transparent; text-align: center; padding-bottom: 10px; }
+.warn__meta { font-size: 10px; position: absolute; bottom: 50px; right: 10px; -webkit-transform: rotate(-90deg) translateX(100%); -ms-transform: rotate(-90deg) translateX(100%); transform: rotate(-90deg) translateX(100%); -webkit-transform-origin: right; -ms-transform-origin: right; transform-origin: right; color: #fff; letter-spacing: 1px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 767px){
- .m-logo{ display: block; } }
+ .m-logo{ display: block; }
+ .warn{ display: block; }
+ .warn img{ opacity: 0.6; } }
 
 
 

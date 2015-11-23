@@ -1,6 +1,7 @@
 // Normally mainpage styles
 // body
 // 	+s(coderiver)
+
 .i-logo-new
 	// +s(logo_kaliadnae)
 	display: inline-block
@@ -31,4 +32,25 @@
 		z-index: 2
 		position: relative 
 		
-	
+.warn
+	display: none
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	+hide-text
+	text-align: center 
+	padding-bottom: 10px 
+	+r(767)
+		display: block
+		img
+			opacity: .6
+	&__meta
+		font-size: 10px
+		position: absolute
+		bottom: 50px
+		right: 10px
+		transform: rotate(-90deg) translateX(100%) 
+		transform-origin: right
+		color: #fff  
+		letter-spacing: 1px 
