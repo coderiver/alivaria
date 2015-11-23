@@ -205,6 +205,7 @@ section.content { margin: 0px auto; }
 .welcome .data p { line-height: 26px; margin: 15px 0px 0px; }
 
 .welcome .data .button { width: 156px; height: 36px; line-height: 32px !important; }
+.welcome .data .button.m-button { display: none; }
 
 .welcome .data .button:before { width: 160px; height: 40px; }
 
@@ -767,6 +768,7 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
 @media only screen and (max-width: 767px) {
  body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; min-height: initial; }
  body._check #page, body._product #page, body._welcome #page { padding-bottom: 45px; padding-top: 0; }
+ body._result #page, body._service #page { padding: 0; }
  header.main { height: auto; text-align: center; margin-top: 15px; }
  header.main .logo { display: none; }
  header.main .brand._2, header.main .brand._1 { display: none; }
@@ -784,7 +786,10 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .checking { padding-top: 0; }
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }
- .checking .options .button + .button { float: none; margin-top: 20px; } }
+ .checking .options .button + .button { float: none; margin-top: 20px; }
+ .service .editor #scene { display: none; }
+ .form-upload-photo { display: none; }
+ nav.progress { display: none; } }
 
 
 

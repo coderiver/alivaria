@@ -90,6 +90,9 @@ body._welcome #page {
 body._result #page,
 body._service #page {
 	padding:20px;
+	@include adptv {
+		padding: 0;
+	}
 }
 
 /*[==Preloader <]*/
@@ -644,6 +647,9 @@ section.content {
 	width:156px;
 	height:36px;
 	line-height:32px !important;
+	&.m-button {
+		display: none;
+	}
 	@include adptv {
 		display: none;
 		&.m-button {
@@ -890,6 +896,9 @@ section.content {
 	height:400px;
 	position:absolute;
 	// backg round:url(../www.png) 10px 29px no-repeat;
+	@include adptv {
+		display: none;
+	}
 }
 /*[Scene >]*/
 
@@ -1249,6 +1258,9 @@ button.create-song:active {
 	height:318px;
 	position:absolute;
 	background:#e0e0e0;
+	@include adptv {
+		display: none;
+	}
 }
 
 /*[Demands <]*/
@@ -1671,6 +1683,9 @@ nav.progress {
 	height:59px;
 	position:relative;
 	margin:-25px auto 0px;
+	@include adptv {
+		display: none;
+	}
 }
 nav.progress:before {
 	top:50%;

@@ -50,6 +50,16 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 nav.social, section.content, .welcome { *zoom: 1; }
 nav.social:after, section.content:after, .welcome:after { content: " "; display: table; clear: both; }
 
+.m-choose { display: none; }
+
+.info-window .question { color: #fff; font-size: 24px; text-align: center; font-family: "CharterC"; }
+.info-window .options { color: #fff; width: 300px; overflow: hidden; text-align: center; position: relative; margin: 40px auto 0px; font-family: "CharterC"; }
+.info-window .options .button { display: block; float: none; margin: 0 auto; width: 160px; height: 40px; font-size: 18px; line-height: 36px !important; margin-bottom: 20px; }
+
+.editor .m-choose { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; font-size: 0; }
+.editor .m-choose:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.editor .m-choose .info-window { display: inline-block; vertical-align: middle; }
+
 .slick-slider { position: relative; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
@@ -94,7 +104,8 @@ nav.social:after, section.content:after, .welcome:after { content: " "; display:
 @media only screen and (max-width: 767px){
  .m-logo{ display: block; }
  .warn{ display: block; }
- .warn img{ opacity: 0.6; } }
+ .warn img{ opacity: 0.6; }
+ .m-choose{ display: block; } }
 
 
 

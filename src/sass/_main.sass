@@ -60,3 +60,42 @@ nav.social,
 section.content,
 .welcome
 	+clr
+.m-choose
+	display: none
+	+r(767)
+		display: block
+.info-window
+	.question
+		color: #fff
+		font-size: 24px
+		text-align: center
+		font-family: "CharterC"
+	.options
+		color: #fff
+		width: 300px
+		overflow: hidden
+		text-align: center
+		position: relative
+		margin: 40px auto 0px
+		font-family: "CharterC"
+		.button
+			display: block
+			float: none
+			margin: 0 auto
+			width: 160px
+			height: 40px
+			font-size: 18px
+			line-height: 36px !important
+			margin-bottom: 20px 
+		
+.editor
+	.m-choose
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		+vertical
+		.info-window
+			display: inline-block
+			vertical-align: middle
