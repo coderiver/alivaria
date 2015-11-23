@@ -352,11 +352,11 @@ $(function() {
 			
 			/*[===Begin <]*/
 			var stage = new Kinetic.Stage({
-				width: 320,
+				width: 990,
 				height: 400,
 				container: 'scene'
 			});
-			stage.scale(1, 0.5);
+			stage.scale(0.5, 0.5);
 			/*[Set stage <]*/
 			var setStage = function(step) {
 				var stage = (step.toString()).split('.')[0];
@@ -1885,6 +1885,113 @@ $(function() {
 			//     console.log('hi-2');
 
 		 //    })
+		
+		// Fixed stage size
+		var SCENE_BASE_WIDTH = 990
+		var SCENE_BASE_HEIGHT = 400
+
+		// Max upscale
+		var SCENE_MAX_WIDTH = 990
+		var SCENE_MAX_HEIGHT = 400
+
+		// Get kinetic stage container div
+		var container = stage.container();
+
+		// Get container size
+		var containerSize = {
+		    width: container.clientWidth,
+		    height: container.clientHeight
+		};
+
+		// Odd size can cause blurry picture due to subpixel rendering
+		if(containerSize.width % 2 !== 0) containerSize.width--;
+
+		if(containerSize.height % 2 !== 0) containerSize.height--;
+
+		// Resize stage
+		stage.size(containerSize);
+
+		var scaleX = Math.min(containerSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
+
+		var scaleY = Math.min(containerSize.height, SCENE_MAX_HEIGHT) / SCENE_BASE_HEIGHT;
+
+		var minRatio = Math.min(scaleX, scaleY);
+		var scale = { x: minRatio, y: minRatio };
+
+		stage.scale(scale);
+
+		var stagePos = {
+		    x: (containerSize.width - SCENE_BASE_WIDTH * minRatio) * 0.5,
+		    y: (containerSize.height - SCENE_BASE_HEIGHT * minRatio) * 0.5
+		};
+
+		stage.position(stagePos);
+		stage.batchDraw();
+		// convert fixed coordinates to absolute
+		function toAbsolute (stage, pt) {
+		    return {
+		        x: stage.x() + pt.x * stage.scaleX(),
+		        y: stage.y() + pt.y * stage.scaleY()
+		    };
+		}
+
+		// convert absolute coordinates to fixed
+		function fromAbsolute (stage, pt) {
+		    var newPos = { x: 0, y: 0 };
+		    var scaleX = stage.scaleX();
+		    var scaleY = stage.scaleY();
+
+		    if(scaleX !== 0) {
+		        newPos.x = (pt.x - stage.x()) / scaleX;
+		    }
+
+		    if(scaleY !== 0) {
+		        newPos.y = (pt.y - stage.y()) / scaleY;
+		    }
+
+		    return newPos;
+		}
+		function resizeStage() {
+		    // Get kinetic stage container div
+		    var container = stage.container();
+		    
+		    // Get container size
+		    var containerSize = {
+		        width: container.clientWidth,
+		        height: container.clientHeight
+		    };
+		    
+		    // Odd size can cause blurry picture due to subpixel rendering
+		    if(containerSize.width % 2 !== 0) containerSize.width--;
+		    if(containerSize.height % 2 !== 0) containerSize.height--;
+		    
+		    // Resize stage
+		    stage.size(containerSize);
+
+		    // Scale stage
+		    var scaleX = Math.min(containerSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
+		    var scaleY = Math.min(containerSize.height, SCENE_MAX_HEIGHT) / SCENE_BASE_HEIGHT;
+		    
+		    var minRatio = Math.min(scaleX, scaleY);
+		    var scale = { x: minRatio, y: minRatio };
+		    
+		    stage.scale(scale);
+		    
+		    // Center stage
+		    var stagePos = {
+		        x: (containerSize.width - SCENE_BASE_WIDTH * minRatio) * 0.5,
+		        y: (containerSize.height - SCENE_BASE_HEIGHT * minRatio) * 0.5
+		    };
+		    
+		    stage.position(stagePos);
+		    
+		    // Redraw stage
+		    stage.batchDraw();
+		}
+
+		window.addEventListener('resize', resizeStage);
+		window.addEventListener('orientationchange', resizeStage);
+
 		};
 		/*[===> EDITOR <===]*/
 		
