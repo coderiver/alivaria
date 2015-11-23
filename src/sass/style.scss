@@ -138,6 +138,11 @@ header.main {
 	height:100px;
 	margin:0px auto;
 	position:relative;
+	@include adptv {
+		height: auto;
+		text-align: center;
+		margin-top: 15px;
+	}
 }
 header.main:after {
 	clear:both;
@@ -154,6 +159,9 @@ header.main .logo {
 	display:block;
 	position:absolute;
 	background:url(../img/logo_new.svg) center no-repeat;
+	@include adptv {
+		display: none;
+	}
 }
 /*[Logo >]*/
 
@@ -171,6 +179,7 @@ header.main .brand._1 {
 	transition: all .2s ease;
 	z-index: 2;
 }
+
 // header.main .brand._1:hover,
 // header.main .brand._1:active {
 // 	background-image:url(../img/elements/site/single/beer-logo-1-2.png);
@@ -194,7 +203,11 @@ header.main .brand._2 {
 // 	background-image:url(../img/elements/site/single/beer-logo-2-2.png);
 // }
 /*[Brand >]*/
-
+header.main .brand._2, header.main .brand._1 {
+	@include adptv {
+		display: none;
+	}
+}
 /*[Nav social <]*/
 header.main nav.social {
 	top:42px;
@@ -202,6 +215,10 @@ header.main nav.social {
 	height:35px;
 	overflow:hidden;
 	position:absolute;
+	@include adptv {
+		position: static;
+		display: inline-block;
+	}
 }
 header.main nav.social a {
 	float:left;
@@ -580,17 +597,44 @@ section.content {
 /*[Welcome <]*/
 .welcome {
 	color:#fff;
-	width:500px;
+	max-width:500px;
 	font-size:18px;
 	text-align:center;
 	margin:-73px auto 0px;
 	font-family:"CharterC";
+	@include adptv {
+		margin-top: 0;
+	}
 }
 
 /*[Data <]*/
 .welcome .data {
 	padding-top:50px;
 	float: left;
+	@include adptv {
+		padding-top: 15px;
+		max-width: 280px;
+		margin: 0 auto;
+		float: none;
+	}
+}
+.welcome .data__text {
+	@include adptv {
+		display: none;
+	}
+}
+.welcome .data .data__slider {
+	display: none;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	p {
+		font-family:"CharterC";
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	@include adptv {
+		display: block;
+	}
 }
 .welcome .data p {
 	line-height:26px;
@@ -600,6 +644,12 @@ section.content {
 	width:156px;
 	height:36px;
 	line-height:32px !important;
+	@include adptv {
+		display: none;
+		&.m-button {
+			display: inline-block;
+		}
+	}
 }
 .welcome .data .button:before {
 	width:160px;
@@ -617,6 +667,9 @@ section.content {
 	display:block;
 	margin:0px auto;
 	background:url(../img/elements/site/single/title-ribbon-1-1.png) center no-repeat;
+	@include adptv {
+		display: none;
+	}
 }
 /*[Title >]*/
 
@@ -627,6 +680,9 @@ section.content {
 	display:block;
 	margin:10px auto;
 	background:url(../img/slogan.svg) center no-repeat;
+	@include adptv {
+		display: none;
+	}
 }
 .stage .slogan {
 	width: 350px;
@@ -658,9 +714,12 @@ section.content {
 .welcome .data,
 .product .data {
 	float:left;
-	width:470px;
+	max-width:470px;
 	text-align:center;
 	margin-right:30px;
+	@include adptv {
+		width: 100%;
+	}
 }
 .product .data p {
 	line-height:26px;

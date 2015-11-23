@@ -49,6 +49,7 @@ header.main .brand._1 { top: 118px; right: -23px; width: 198px; height: 158px; d
 header.main .brand._2 { top: 1px; right: 80px; width: 224px; height: 85px; display: block; position: absolute; background: url(../img/logo_kaliadnae.png) center bottom no-repeat; background-size: cover; -webkit-transition: all .2s ease; transition: all .2s ease; z-index: 2; }
 
 /*[Brand >]*/
+
 /*[Nav social <]*/
 header.main nav.social { top: 42px; right: 11px; height: 35px; overflow: hidden; position: absolute; }
 
@@ -193,10 +194,13 @@ section.content { margin: 0px auto; }
 /*[Player >]*/
 /*[Display <]*/
 /*[Welcome <]*/
-.welcome { color: #fff; width: 500px; font-size: 18px; text-align: center; margin: -73px auto 0px; font-family: "CharterC"; }
+.welcome { color: #fff; max-width: 500px; font-size: 18px; text-align: center; margin: -73px auto 0px; font-family: "CharterC"; }
 
 /*[Data <]*/
 .welcome .data { padding-top: 50px; float: left; }
+
+.welcome .data .data__slider { display: none; padding-bottom: 20px; margin-bottom: 20px; }
+.welcome .data .data__slider p { font-family: "CharterC"; font-size: 14px; line-height: 1.5; }
 
 .welcome .data p { line-height: 26px; margin: 15px 0px 0px; }
 
@@ -224,7 +228,7 @@ section.content { margin: 0px auto; }
 .product:after { clear: both; content: ""; display: block; }
 
 /*[Data <]*/
-.welcome .data, .product .data { float: left; width: 470px; text-align: center; margin-right: 30px; }
+.welcome .data, .product .data { float: left; max-width: 470px; text-align: center; margin-right: 30px; }
 
 .product .data p { line-height: 26px; margin: 15px 0px 0px; }
 
@@ -763,7 +767,20 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
 @media only screen and (max-width: 767px) {
  body { background: url(../img/m-bg.png) top center scroll no-repeat; background-size: cover; min-height: initial; }
  body._check #page, body._product #page, body._welcome #page { padding-bottom: 45px; padding-top: 0; }
+ header.main { height: auto; text-align: center; margin-top: 15px; }
+ header.main .logo { display: none; }
+ header.main .brand._2, header.main .brand._1 { display: none; }
+ header.main nav.social { position: static; display: inline-block; }
  footer.main { display: none; }
+ .welcome { margin-top: 0; }
+ .welcome .data { padding-top: 15px; max-width: 280px; margin: 0 auto; float: none; }
+ .welcome .data__text { display: none; }
+ .welcome .data .data__slider { display: block; }
+ .welcome .data .button { display: none; }
+ .welcome .data .button.m-button { display: inline-block; }
+ .welcome .title { display: none; }
+ .welcome .slogan { display: none; }
+ .welcome .data, .product .data { width: 100%; }
  .checking { padding-top: 0; }
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }
