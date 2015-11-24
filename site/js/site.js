@@ -176,7 +176,7 @@ $(function() {
 				height: 320,
 				container: 'scene'
 			});
-			
+
 			var scene = new Kinetic.Layer();
 						
 			/*[Load photo <]*/
@@ -364,7 +364,13 @@ $(function() {
 				$('.service .description .item').removeClass('active').filter('[data-stage="'+stage+'"]').addClass('active');
 				$('.service .editor .stage[data-step="'+step+'"]').addClass('active').siblings().removeClass('active');
 				$('nav.progress span.active').prevAll().addClass('enable').removeClass('disable');
-				
+				(function() {
+					if($(window).width() < 768) {
+						$('.m-progress .progress span[data-stage="'+stage+'"]').addClass('enable active').removeClass('is-click').siblings().removeClass('active disable');
+						$('.m-progress .progress span.active').prevAll().addClass('enable').removeClass('disable is-click');
+						$('.m-progress .progress span.active').prev().addClass('is-click');
+					}
+				})();
 				is_allowed_change_star = false;
 				is_allowed_change_mask = false;
 				
@@ -375,6 +381,8 @@ $(function() {
 					is_allowed_change_mask = true;
 					is_allowed_change_star = false;
 					$('.kineticjs-content').addClass('is-active');
+					if($(window).width() < 768) hideCover();
+					$('.m-progress .progress').hide();
 				};
 				
 				if (stage == 2) {
@@ -383,6 +391,8 @@ $(function() {
 					
 					is_allowed_change_star = true;
 					is_allowed_change_mask = false;
+					if($(window).width() < 768) showCover();
+					$('.m-progress .progress').show();
 				};
 				
 				if (stage == 3 || stage == 4) {
@@ -391,6 +401,16 @@ $(function() {
 					hideMaskOnToolbar(mask_on_toolbar);
 					hideStarOnToolbar(star_on_toolbar);
 				};
+				if (stage == 3 && $(window).width() < 768) {
+					hideCover();
+				};
+				if (stage == 4 && $(window).width() < 768) {
+					showCover();
+				};
+				if (stage == 5 && $(window).width() < 768) {
+					hideCover();
+				};
+				console.log('setStage');
 			};
 							
 			$('.service .editor .stage button.next').on('click', function(e) {
@@ -1481,7 +1501,13 @@ $(function() {
 				workspace.draw();
 			};
 			/*[Show/hide mask controls >]*/
-			
+			//show cover
+			var showCover = function() {
+				$('.js-cover').addClass('is-active');
+			};
+			var hideCover = function() {
+				$('.js-cover').removeClass('is-active');
+			};
 			/*[Set size and angle mask <]*/
 			var setSizeAndAngleMask = function(start, picture, control) {
 				var Ax, Ay, Bx, By, angle, width, height, radius,
@@ -1812,6 +1838,51 @@ $(function() {
 					
 				};
 			});
+			(function() {
+				if($(window).width() < 768) {
+					$('.m-progress .progress span').click(function(e) {
+						var $this = $(this), stage = $this.data('stage');
+						// setStage(stage);
+						if ($this.hasClass('enable') && !$this.hasClass('active')) {
+							$this.addClass('active').siblings().removeClass('active');
+							$this.prevAll().addClass('enable').removeClass('disable');
+							
+							soundManager.stopAll();
+							$('.service .editor .player').hide();
+											
+							for (key in mask_time_lines) {
+								mask_time_lines[key].kill();
+								delete mask_time_lines[key];
+							};
+							
+							if (stage == 1) {
+								setStage('1.2');
+								showMaskOnToolbar(mask_on_toolbar);
+								console.log('s');
+							};
+							if (stage == 2) {
+								setStage('2.0');
+								showStarOnToolbar();
+							};
+							if (stage == 3) {
+								setStage('3.0');
+							};
+							if (stage == 4) {
+								setStage('4.0');
+								savePicture();
+								animateClipart();
+								$('.service .editor .player').show();
+								if (is_custom_sound) {
+									playSoundSet();
+								} else {
+									playSound();
+								};
+							};
+							
+						};
+					});
+				}
+			})();
 			/*[Nav progress >]*/
 			
 			/*[Button remove <]*/

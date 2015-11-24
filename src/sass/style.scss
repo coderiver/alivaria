@@ -77,6 +77,9 @@ body._service {
 	margin:0px auto;
 	// min-width:980px;
 	position:relative;
+	@include adptv {
+		max-width: 440px;
+	}
 }
 body._check #page,
 body._product #page,
@@ -613,6 +616,7 @@ section.content {
 .welcome .data {
 	padding-top:50px;
 	float: left;
+	width: 100%;
 	@include adptv {
 		padding-top: 15px;
 		max-width: 280px;
@@ -719,15 +723,13 @@ section.content {
 }
 
 /*[Data <]*/
-.welcome .data,
+
 .product .data {
 	float:left;
 	max-width:470px;
+	width: 100%;
 	text-align:center;
 	margin-right:30px;
-	@include adptv {
-		width: 100%;
-	}
 }
 .product .data {
 	@include adptv {
@@ -914,27 +916,111 @@ section.content {
 	// backg round:url(../www.png) 10px 29px no-repeat;
 	@include adptv {
 		// display: none;
-		position: static;
+		// position: static;
+		height: 100%;
 		canvas {
 			max-width: 100%;
 		}
 	}
 }
+
 /*[Scene >]*/
 
 /*[Stage <]*/
 .service .editor .stage {
 	display:none;
+	.m-wrap {
+		text-align: center;
+		.instruction p {
+			text-shadow: 0px 0px 2px #1b2344
+		}
+		.button {
+			width: 156px;
+			height: 36px;
+			line-height: 32px !important;
+		}
+		.button {
+			margin-top: 20px;
+		}
+		.slogan {
+			background-position: center;
+		}
+		nav.social {
+			text-align: center;
+			margin: 20px 0;
+			a {
+				display: inline-block;
+				float: none;
+			}
+		}
+	}
 }
 .service .editor .stage:after {
 	clear:both;
 	content:"";
 	display:block;
 }
+.cover {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background:url(../img/m-bg.png) top center scroll repeat;
+	opacity: .6;
+	z-index: 2;
+	&.is-active {
+		display: block;
+	}
+}
 .service .editor .stage.active {
 	display:block;
-	@include adptv {
+	.m-wrap {
 		display: none;
+		position: absolute;
+		bottom: 10px;
+		padding: 0 20px;
+		width: 100%;
+		.make-choice {
+			text-align: left;
+			.title {
+				font-size: 20px;
+				line-height: 24px;
+				margin-bottom: 15px;
+				font-family: "CharterBlackC";
+				text-align: center;
+			}
+			label {
+				display: block;
+				margin-top: 15px;
+				padding-left: 40px;
+				position: relative;
+				.radio {
+					top: 0px;
+					left: 0px;
+					position: absolute;
+				}
+			}
+		}
+		.songs-list {
+			text-align: left;
+			.title {
+				text-align: center;
+			}
+		}
+		&.is-cover {
+			z-index: 5;
+			top: 0;
+		}
+	}
+	@include adptv {
+		.wrap {
+			display: none;
+		}
+		.m-wrap {
+			display: block;
+		}
 	}
 }
 

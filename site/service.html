@@ -41,9 +41,21 @@
         
         <!-- [> PAGE <] -->
         <div id="page">
-            <div class="m-logo">
+
+            <div class="m-progress">
+                <div class="progress">
+                    <span class="enable" data-stage="1"></span>
+                    <span class="disable" data-stage="2"></span>
+                    <span class="disable" data-stage="3"></span>
+                    <span class="disable" data-stage="4"></span>
+                    <span class="disable" data-stage="5"></span>
+                </div><!-- [ progress ] -->
+            </div>
+
+            <div class="m-header">
                 <a href="#" class="i-logo-new"></a>
             </div>
+
             <!-- [> HEADER <] -->
             <header class="main">
                 <a class="logo" href="index.html"></a>
@@ -96,72 +108,151 @@
                             </form><!-- [ form-upload-photo ] -->
                         </div><!-- [ form-upload-photo ] -->
                         <div class="stage" data-step="1.0">
-                            <aside class="left">
-                                <div class="btn-group">
-                                    <button class="next" data-step="1.1">далей</button>
-                                </div>
-                                <div class="instruction">
-                                    <p>Выберыце пазіцыю фатаграфіі</p>
-                                </div><!-- [ instruction ] -->
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
-                            </aside><!-- [ right ] -->
+                            <div class="wrap">
+                                <aside class="left">
+                                    <div class="btn-group">
+                                        <button class="next" data-step="1.1">далей</button>
+                                    </div>
+                                    <div class="instruction">
+                                        <p>Выберыце пазіцыю фатаграфіі</p>
+                                    </div><!-- [ instruction ] -->
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                </aside><!-- [ right ] -->
+                            </div>
+                            <div class="m-wrap">
+                                <button class="next button _2" data-step="1.1">далей</button>
+                            </div>
                         </div><!-- [ stage ] -->
                         
                         <div class="stage" data-step="1.1">
-                            <aside class="left left_mod clearfix">
-                                <div class="btn-group">
-                                    <button class="next" data-step="1.2">далей</button>
-                                </div>
-                                <div class="instruction">
-                                    <p>Бяром калядны фотаздымак</p>
-                                </div><!-- [ instruction ] -->
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
-                            </aside><!-- [ right ] -->
+                            <div class="wrap">
+                                <aside class="left left_mod clearfix">
+                                    <div class="btn-group">
+                                        <button class="next" data-step="1.2">далей</button>
+                                    </div>
+                                    <div class="instruction">
+                                        <p>Бяром калядны фотаздымак</p>
+                                    </div><!-- [ instruction ] -->
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                </aside><!-- [ right ] -->
+                            </div>
+                            <div class="m-wrap">
+                                <button class="next button _2" data-step="1.2">далей</button>
+                            </div>
                         </div><!-- [ stage ] -->
                         
                         <div class="stage" data-step="1.2">
-                            <aside class="left">
-                                <div class="btn-group">
-                                    <button class="next" data-step="2.0">далей</button>
-                                </div>
+                            <div class="wrap">
+                                <aside class="left">
+                                    <div class="btn-group">
+                                        <button class="next" data-step="2.0">далей</button>
+                                    </div>
+                                    <div class="instruction">
+                                         <p>Выберыце найлепшы кадр <br>
+                                           Дадайце калядныя маскi</p>
+                                    </div><!-- [ instruction ] -->
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                </aside><!-- [ right ] -->
+                            </div>
+                            <div class="m-wrap">
                                 <div class="instruction">
-                                     <p>Выберыце найлепшы кадр <br>
-                                       Дадайце калядныя маскi</p>
+                                    <p>Дадаем калядныя маскi</p>
+
                                 </div><!-- [ instruction ] -->
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
-                            </aside><!-- [ right ] -->
+                                <button class="next button _2 " data-step="2.0">далей</button>
+                            </div>
                         </div><!-- [ stage ] -->
                         
                         <div class="stage" data-step="2.0">
-                            <aside class="left">
-                                <div class="btn-group">
-                                    <button class="next" data-step="3.0">далей</button>
+                            <div class="wrap">
+                                <aside class="left">
+                                    <div class="btn-group">
+                                        <button class="next" data-step="3.0">далей</button>
+                                    </div>
+                                    <div class="instruction">
+                                        <p>Адкажыце на пытанне і дадайце калядную зорку</p>
+                                    </div><!-- [ instruction ] -->
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                    <div class="title">Якое стаўленне да традыцый вам падабаецца?</div>
+                                    <label><input class="star" name="star" type="radio" value="1">Традыцыі не павінны змяняцца нават з цягам часу.</label>
+                                    <label><input class="star" name="star" type="radio" value="2">Пасля выпрабавання часам традыцыі могуць нязначна змяняцца.</label>
+                                    <label><input class="star" name="star" type="radio" value="3">Традыцыі павінны жыць і ўвесь час развівацца і дапаўняцца.</label>
+                                </aside><!-- [ right ] -->
+                            </div>
+                            <div class="m-wrap is-cover">
+                                <div class="make-choice">
+                                    <div class="title">Адкажыце на пытанне, каб знайсці сваю калядную зорку. Якое стаўленне да традыцый вам падабаецца? </div>
+                                    <label><input class="star" name="star" type="radio" value="1">Традыцыі не павінны змяняцца нават з цягам часу.</label>
+                                    <label><input class="star" name="star" type="radio" value="2">Пасля выпрабавання часам традыцыі могуць нязначна змяняцца.</label>
+                                    <label><input class="star" name="star" type="radio" value="3">Традыцыі павінны жыць і ўвесь час развівацца і дапаўняцца.</label>
                                 </div>
-                                <div class="instruction">
-                                    <p>Адкажыце на пытанне і дадайце калядную зорку</p>
-                                </div><!-- [ instruction ] -->
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
-                                <div class="title">Якое стаўленне да традыцый вам падабаецца?</div>
-                                <label><input class="star" name="star" type="radio" value="1">Традыцыі не павінны змяняцца нават з цягам часу.</label>
-                                <label><input class="star" name="star" type="radio" value="2">Пасля выпрабавання часам традыцыі могуць нязначна змяняцца.</label>
-                                <label><input class="star" name="star" type="radio" value="3">Традыцыі павінны жыць і ўвесь час развівацца і дапаўняцца.</label>
-                            </aside><!-- [ right ] -->
+                                <button class="next button _2" data-step="3.0">адказаць</button>
+                            </div>
                         </div><!-- [ stage ] -->
                         
                         <div class="stage" data-step="3.0">
-                            <aside class="left">
-                                <div class="btn-group">
-                                    <button class="next" data-step="4.0">Хачу праспяваць</button>
-                                </div>
-                                <div class="instruction">
-                                    <p>Абярыце адну з песень для каляднага віншавання. Пры жаданні можаце нават праспяваць!</p>
-                                </div><!-- [ instruction ] -->
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
+                            <div class="wrap">
+                                <aside class="left">
+                                    <div class="btn-group">
+                                        <button class="next" data-step="4.0">Хачу праспяваць</button>
+                                    </div>
+                                    <div class="instruction">
+                                        <p>Абярыце адну з песень для каляднага віншавання. Пры жаданні можаце нават праспяваць!</p>
+                                    </div><!-- [ instruction ] -->
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                    <div class="songs-list">
+                                        <div class="title">Націсніце, каб пачаць запіс</div>
+                                        <div class="item" data-index="1">
+                                            <label>
+                                                <input class="song" name="song" type="radio" value="1" checked>
+                                                <a class="player-link" href="audio/1-1.mp3">Скасаваць</a>
+                                                <span class="label">Скасаваць</span>
+                                            </label>
+                                        </div><!-- [ item ] -->
+                                        <div class="item" data-index="2">
+                                            <label>
+                                                <input class="song" name="song" type="radio" value="2">
+                                                <a class="player-link" href="audio/2-1.mp3">Гатова</a>
+                                                <span class="label">Гатова</span>
+                                            </label>
+                                        </div><!-- [ item ] -->
+                                        <div class="item" data-index="3">
+                                            <label>
+                                                <input class="song" name="song" type="radio" value="3">
+                                                <a class="player-link" href="audio/3-1.mp3">Перазапісаць</a>
+                                                <span class="label">Перазапісаць</span>
+                                            </label>
+                                        </div><!-- [ item ] -->
+                                    </div><!-- [ sound-track ] -->
+                                    <button class="create-song" data-popup="custom-sound">Жадаю праспяваць</button>
+                                </aside><!-- [ right ] -->
+                            </div>
+                            <div class="m-wrap">
+                                <button class="next button _2 " data-step="4.0">далей</button>
+                            </div>
+                        </div><!-- [ stage ] -->
+                        
+                        <div class="stage" data-step="4.0">
+                            <div class="wrap">
+                                <aside class="left">
+                                </aside><!-- [ left ] -->
+                                <aside class="right">
+                                    <div class="slogan"></div>  
+                                    <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем, каб дапамагчы светлым сілам атрымаць перамогу над цёмнымі!  Збірайце ў падзяку “падабайкі“  і  стварайце свае калядныя традыцыі! </p>
+                                    <p>Дзе будзем калядаваць?</p>
+                                    <nav class="social">
+                                        <a class="fb" href="#"></a>
+                                        <a class="vk" href="#"></a>
+                                        <a class="ok" href="#"></a>
+                                    </nav><!-- [ social ] -->
+                                </aside><!-- [ right ] -->
+                            </div>    
+                            <div class="m-wrap is-cover">
                                 <div class="songs-list">
                                     <div class="title">Націсніце, каб пачаць запіс</div>
                                     <div class="item" data-index="1">
@@ -186,25 +277,23 @@
                                         </label>
                                     </div><!-- [ item ] -->
                                 </div><!-- [ sound-track ] -->
-                                <button class="create-song" data-popup="custom-sound">Жадаю праспяваць</button>
-                            </aside><!-- [ right ] -->
+                                <button class="next button _2" data-step="5.0">гатова</button>
+                            </div>
                         </div><!-- [ stage ] -->
-                        
-                        <div class="stage" data-step="4.0">
-                            <aside class="left">
-                            </aside><!-- [ left ] -->
-                            <aside class="right">
+                        <div class="stage" data-step="5.0">
+                            <div class="m-wrap">
                                 <div class="slogan"></div>  
-                                <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем, каб дапамагчы светлым сілам атрымаць перамогу над цёмнымі!  Збірайце ў падзяку “падабайкі“  і  стварайце свае калядныя традыцыі! </p>
-                                <p>Дзе будзем калядаваць?</p>
+                                <p>Падзяліцеся з сябрамі сваёй бадзёрасцю і ўзнятым настроем!</p>
                                 <nav class="social">
                                     <a class="fb" href="#"></a>
                                     <a class="vk" href="#"></a>
                                     <a class="ok" href="#"></a>
                                 </nav><!-- [ social ] -->
-                            </aside><!-- [ right ] -->
+                                <p>Дзе будзем калядаваць?</p>
+                            </div>
                         </div><!-- [ stage ] -->
                     </div><!-- [ editor ] -->
+                   
                     
                     <nav class="progress">
                         <span class="enable active" data-stage="1"></span>
@@ -239,7 +328,7 @@
             </div> 
         </div><!-- [ page ] -->
         <!-- [> PAGE <] -->
-        
+        <div class="cover js-cover"> </div>
         <!-- [> HIDDEN <] -->
         <div class="hidden">
             <input id="file-photo" type="file">

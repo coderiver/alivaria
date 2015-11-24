@@ -197,7 +197,7 @@ section.content { margin: 0px auto; }
 .welcome { color: #fff; max-width: 500px; font-size: 18px; text-align: center; margin: -73px auto 0px; font-family: "CharterC"; }
 
 /*[Data <]*/
-.welcome .data { padding-top: 50px; float: left; }
+.welcome .data { padding-top: 50px; float: left; width: 100%; }
 
 .welcome .data .data__slider { display: none; padding-bottom: 20px; margin-bottom: 20px; }
 .welcome .data .data__slider p { font-family: "CharterC"; font-size: 14px; line-height: 1.5; }
@@ -229,7 +229,7 @@ section.content { margin: 0px auto; }
 .product:after { clear: both; content: ""; display: block; }
 
 /*[Data <]*/
-.welcome .data, .product .data { float: left; max-width: 470px; text-align: center; margin-right: 30px; }
+.product .data { float: left; max-width: 470px; width: 100%; text-align: center; margin-right: 30px; }
 
 .product .data p { line-height: 26px; margin: 15px 0px 0px; }
 
@@ -295,10 +295,28 @@ section.content { margin: 0px auto; }
 /*[Scene >]*/
 /*[Stage <]*/
 .service .editor .stage { display: none; }
+.service .editor .stage .m-wrap { text-align: center; }
+.service .editor .stage .m-wrap .instruction p { text-shadow: 0px 0px 2px #1b2344; }
+.service .editor .stage .m-wrap .button { width: 156px; height: 36px; line-height: 32px !important; }
+.service .editor .stage .m-wrap .button { margin-top: 20px; }
+.service .editor .stage .m-wrap .slogan { background-position: center; }
+.service .editor .stage .m-wrap nav.social { text-align: center; margin: 20px 0; }
+.service .editor .stage .m-wrap nav.social a { display: inline-block; float: none; }
 
 .service .editor .stage:after { clear: both; content: ""; display: block; }
 
+.cover { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: url(../img/m-bg.png) top center scroll repeat; opacity: .6; z-index: 2; }
+.cover.is-active { display: block; }
+
 .service .editor .stage.active { display: block; }
+.service .editor .stage.active .m-wrap { display: none; position: absolute; bottom: 10px; padding: 0 20px; width: 100%; }
+.service .editor .stage.active .m-wrap .make-choice { text-align: left; }
+.service .editor .stage.active .m-wrap .make-choice .title { font-size: 20px; line-height: 24px; margin-bottom: 15px; font-family: "CharterBlackC"; text-align: center; }
+.service .editor .stage.active .m-wrap .make-choice label { display: block; margin-top: 15px; padding-left: 40px; position: relative; }
+.service .editor .stage.active .m-wrap .make-choice label .radio { top: 0px; left: 0px; position: absolute; }
+.service .editor .stage.active .m-wrap .songs-list { text-align: left; }
+.service .editor .stage.active .m-wrap .songs-list .title { text-align: center; }
+.service .editor .stage.active .m-wrap.is-cover { z-index: 5; top: 0; }
 
 /*[Aside <]*/
 .service .editor .stage aside { line-height: 20px; position: relative; text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.75); }
@@ -767,6 +785,7 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  nav.slider .item { font-size: 12px; } }
 @media only screen and (max-width: 767px) {
  body { background: url(../img/m-bg.png) top center scroll repeat; background-size: cover; min-height: initial; }
+ #page { max-width: 440px; }
  body._check #page, body._product #page, body._welcome #page { padding-bottom: 45px; padding-top: 0; }
  body._result #page, body._service #page { padding: 0; }
  header.main { height: auto; text-align: center; margin-top: 15px; }
@@ -783,7 +802,6 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .welcome .title { display: none; }
  .welcome .slogan { display: none; }
  .product { margin: 0; }
- .welcome .data, .product .data { width: 100%; }
  .product .data { padding: 0 20px; }
  .product .title { margin-left: 20px; margin-right: 20px; }
  .product aside.right { display: none; }
@@ -791,9 +809,10 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }
  .checking .options .button + .button { float: none; margin-top: 20px; }
- .service .editor #scene { position: static; }
+ .service .editor #scene { height: 100%; }
  .service .editor #scene canvas { max-width: 100%; }
- .service .editor .stage.active { display: none; }
+ .service .editor .stage.active .wrap { display: none; }
+ .service .editor .stage.active .m-wrap { display: block; }
  .service .description { display: none; }
  .kineticjs-content { display: none !important; }
  .kineticjs-content.is-active { display: block !important; }

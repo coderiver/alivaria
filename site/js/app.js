@@ -30,9 +30,19 @@ $(document).ready(function() {
 	
 	// upload file on service
 	$('.js-upload').on('click', function() {
-		var $parent = $(this).parents('.js-file'),
-			$input = $parent.find("input[type='file']");
 		$('#file-photo').trigger('click');
 	});
+
+	// // active cover
+	// (function() {
+	// 	if($(window).width() < 768) {
+	// 		$('.js-show-cover').on('click', function() {
+	// 			$('.js-cover').addClass('is-active');
+	// 		});
+	// 		$('.js-hide-cover').on('click', function() {
+	// 			$('.js-cover').removeClass('is-active');
+	// 		});
+	// 	}
+	// })();
 
 });
