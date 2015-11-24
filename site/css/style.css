@@ -306,7 +306,6 @@ section.content { margin: 0px auto; }
 .service .editor .stage:after { clear: both; content: ""; display: block; }
 
 .cover { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: url(../img/m-bg.png) top center scroll repeat; opacity: .6; z-index: 2; }
-.cover.is-active { display: block; }
 
 .service .editor .stage.active { display: block; }
 .service .editor .stage.active .m-wrap { display: none; position: absolute; bottom: 10px; padding: 0 20px; width: 100%; }
@@ -811,6 +810,7 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .checking .options .button + .button { float: none; margin-top: 20px; }
  .service .editor #scene { height: 100%; }
  .service .editor #scene canvas { max-width: 100%; }
+ .cover.is-active { display: block; }
  .service .editor .stage.active .wrap { display: none; }
  .service .editor .stage.active .m-wrap { display: block; }
  .service .description { display: none; }

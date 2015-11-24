@@ -14,16 +14,4 @@ $(document).ready(function() {
 		$('#file-photo').trigger('click');
 	});
 
-	// // active cover
-	// (function() {
-	// 	if($(window).width() < 768) {
-	// 		$('.js-show-cover').on('click', function() {
-	// 			$('.js-cover').addClass('is-active');
-	// 		});
-	// 		$('.js-hide-cover').on('click', function() {
-	// 			$('.js-cover').removeClass('is-active');
-	// 		});
-	// 	}
-	// })();
-
 });

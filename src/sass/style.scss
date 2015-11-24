@@ -971,7 +971,9 @@ section.content {
 	opacity: .6;
 	z-index: 2;
 	&.is-active {
-		display: block;
+		@include adptv {
+			display: block;
+		}
 	}
 }
 .service .editor .stage.active {
