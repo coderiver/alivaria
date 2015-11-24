@@ -381,7 +381,6 @@ section.content {
 	padding:35px;
 	color:#1a2f3f;
 	font-size:16px;
-	min-width:640px;
 	text-align:left;
 	line-height:24px;
 	background:#e0e0e0;
@@ -1844,7 +1843,6 @@ nav.progress span[data-stage="4"].active {
 	padding:35px;
 	color:#1a2f3f;
 	font-size:16px;
-	min-width:640px;
 	text-align:left;
 	line-height:24px;
 	background:#e0e0e0;
@@ -1904,7 +1902,7 @@ nav.progress span[data-stage="4"].active {
 
 /*[Window message <]*/
 .window.message .box {
-	width:640px;
+	max-width:640px;
 }
 /*[Window message >]*/
 

@@ -356,7 +356,7 @@ $(function() {
 				height: 400,
 				container: 'scene'
 			});
-			stage.scale(0.5, 0.5);
+
 			/*[Set stage <]*/
 			var setStage = function(step) {
 				var stage = (step.toString()).split('.')[0];
@@ -420,7 +420,7 @@ $(function() {
 				fill: 'transparent'
 			});	scene.add(toolbar_area);
 			/*[Create areas >]*/
-									
+
 			/*[Create player <]*/
 			soundManager.createSound({
 				autoLoad: true,
@@ -1846,152 +1846,96 @@ $(function() {
 			stage.add(toolbar);
 		
 			// make RESPONSIVE CANVAS 
-			// var initialScale = stage.scale(); //returns {x: 1, y: 1} 
-			// var initialWidth = $("#scene").innerWidth(); // initial width
-			// var initialHeight = $("#scene").innerHeight(); // initial height
+			(function() {
+				if($(window).width() > 767) {
 
-			// var resizeX = function(event) { // listen for change
-			//     var width = $("#scene").innerWidth(); // new width of page
-			//     var height = $("#scene").innerHeight(); // new height of page
-			//     console.log(width);
-			//     console.log(height);
-			//     var xScale =  (width  / initialWidth) * initialScale.x;  // percent change in width (Ex: 1000 - 400/1000 means the page scaled down 60%, you should play with this to get wanted results)
-			//     var yScale = (height / initialHeight) * initialScale.y;
-			//     var newScale = {x: xScale, y: yScale};
-			//         console.log(newScale);
-			//     stage.setAttr('width', width);
-			//     stage.setAttr('height', height);    
-			//     stage.setAttr('scale', newScale ); 
-			//     stage.draw();
-			//     console.log('hi');
-			// }	
-			// setTimeout(function(){resizeX();}, 5000);
-			
-			// window.addEventListener("resize", resizeX);
-		 //    // window.addEventListener("load", resizeX);
-		 //    $(window).on('load', function() {
-		 //    	var width = $("#scene").innerWidth(); // new width of page
-		 //    	var height = $("#scene").innerHeight(); // new height of page
-		 //    	console.log(width);
-		 //    	console.log(height);
-		 //    	var xScale =  (width  / initialWidth) * initialScale.x;  // percent change in width (Ex: 1000 - 400/1000 means the page scaled down 60%, you should play with this to get wanted results)
-		 //    	var yScale = (height / initialHeight) * initialScale.y;
-		 //    	var newScale = {x: xScale, y: yScale};
-		 //    	    console.log(newScale);
-		 //    	stage.setAttr('width', width);
-		 //    	stage.setAttr('height', height);    
-		 //    	stage.setAttr('scale', newScale ); 
-		 //    	stage.draw();
-			//     console.log('hi-2');
+					// Fixed stage size
+					var SCENE_BASE_WIDTH = 990
+					var SCENE_BASE_HEIGHT = 400
 
-		 //    })
-		
-		// Fixed stage size
-		var SCENE_BASE_WIDTH = 990
-		var SCENE_BASE_HEIGHT = 400
+					// Max upscale
+					var SCENE_MAX_WIDTH = 990
+					var SCENE_MAX_HEIGHT = 400
+					
+					// convert fixed coordinates to absolute
+					function toAbsolute (stage, pt) {
+					    return {
+					        x: stage.x() + pt.x * stage.scaleX(),
+					        y: stage.y() + pt.y * stage.scaleY()
+					    };
+					}
 
-		// Max upscale
-		var SCENE_MAX_WIDTH = 990
-		var SCENE_MAX_HEIGHT = 400
+					// convert absolute coordinates to fixed
+					function fromAbsolute (stage, pt) {
+					    var newPos = { x: 0, y: 0 };
+					    var scaleX = stage.scaleX();
+					    var scaleY = stage.scaleY();
 
-		// Get kinetic stage container div
-		var container = stage.container();
+					    if(scaleX !== 0) {
+					        newPos.x = (pt.x - stage.x()) / scaleX;
+					    }
 
-		// Get container size
-		var containerSize = {
-		    width: container.clientWidth,
-		    height: container.clientHeight
-		};
+					    if(scaleY !== 0) {
+					        newPos.y = (pt.y - stage.y()) / scaleY;
+					    }
 
-		// Odd size can cause blurry picture due to subpixel rendering
-		if(containerSize.width % 2 !== 0) containerSize.width--;
+					    return newPos;
+					}
 
-		if(containerSize.height % 2 !== 0) containerSize.height--;
+					function resizeStage() {
+					    // Get kinetic stage container div
+					    var container = stage.container();
+					    
+					    // Get container size
+					    var containerSize = {
+					        width: container.clientWidth,
+					        height: container.clientHeight
+					    };
+					    
+					    // Odd size can cause blurry picture due to subpixel rendering
+					    if(containerSize.width % 2 !== 0) containerSize.width--;
+					    if(containerSize.height % 2 !== 0) containerSize.height--;
+					    
+					    // Resize stage
+					    stage.size(containerSize);
 
-		// Resize stage
-		stage.size(containerSize);
+					    // Scale stage
+					    var scaleX = Math.min(containerSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
+					    var scaleY = Math.min(containerSize.height, SCENE_MAX_HEIGHT) / SCENE_BASE_HEIGHT;
+					    
+					    var minRatio = Math.min(scaleX, scaleY);
+					    var scale = { x: minRatio, y: minRatio };
+					    
+					    stage.scale(scale);
+					    
+					    // Center stage
+					    var stagePos = {
+					        x: (containerSize.width - SCENE_BASE_WIDTH * minRatio) * 0.5,
+					        y: (containerSize.height - SCENE_BASE_HEIGHT * minRatio) * 0.5
+					    };
+					    
+					    stage.position(stagePos);
+					    
+					    // Redraw stage
+					    stage.batchDraw();
+					}
 
-		var scaleX = Math.min(containerSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
+					resizeStage();
 
-		var scaleY = Math.min(containerSize.height, SCENE_MAX_HEIGHT) / SCENE_BASE_HEIGHT;
+					window.addEventListener('resize', resizeStage);
+					window.addEventListener('orientationchange', resizeStage);
+				}
 
-		var minRatio = Math.min(scaleX, scaleY);
-		var scale = { x: minRatio, y: minRatio };
-
-		stage.scale(scale);
-
-		var stagePos = {
-		    x: (containerSize.width - SCENE_BASE_WIDTH * minRatio) * 0.5,
-		    y: (containerSize.height - SCENE_BASE_HEIGHT * minRatio) * 0.5
-		};
-
-		stage.position(stagePos);
-		stage.batchDraw();
-		// convert fixed coordinates to absolute
-		function toAbsolute (stage, pt) {
-		    return {
-		        x: stage.x() + pt.x * stage.scaleX(),
-		        y: stage.y() + pt.y * stage.scaleY()
-		    };
-		}
-
-		// convert absolute coordinates to fixed
-		function fromAbsolute (stage, pt) {
-		    var newPos = { x: 0, y: 0 };
-		    var scaleX = stage.scaleX();
-		    var scaleY = stage.scaleY();
-
-		    if(scaleX !== 0) {
-		        newPos.x = (pt.x - stage.x()) / scaleX;
-		    }
-
-		    if(scaleY !== 0) {
-		        newPos.y = (pt.y - stage.y()) / scaleY;
-		    }
-
-		    return newPos;
-		}
-		function resizeStage() {
-		    // Get kinetic stage container div
-		    var container = stage.container();
-		    
-		    // Get container size
-		    var containerSize = {
-		        width: container.clientWidth,
-		        height: container.clientHeight
-		    };
-		    
-		    // Odd size can cause blurry picture due to subpixel rendering
-		    if(containerSize.width % 2 !== 0) containerSize.width--;
-		    if(containerSize.height % 2 !== 0) containerSize.height--;
-		    
-		    // Resize stage
-		    stage.size(containerSize);
-
-		    // Scale stage
-		    var scaleX = Math.min(containerSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
-		    var scaleY = Math.min(containerSize.height, SCENE_MAX_HEIGHT) / SCENE_BASE_HEIGHT;
-		    
-		    var minRatio = Math.min(scaleX, scaleY);
-		    var scale = { x: minRatio, y: minRatio };
-		    
-		    stage.scale(scale);
-		    
-		    // Center stage
-		    var stagePos = {
-		        x: (containerSize.width - SCENE_BASE_WIDTH * minRatio) * 0.5,
-		        y: (containerSize.height - SCENE_BASE_HEIGHT * minRatio) * 0.5
-		    };
-		    
-		    stage.position(stagePos);
-		    
-		    // Redraw stage
-		    stage.batchDraw();
-		}
-
-		window.addEventListener('resize', resizeStage);
-		window.addEventListener('orientationchange', resizeStage);
-
+				else {
+					function reinitSize() {
+						stage.setWidth($(window).width());
+						stage.setHeight($(window).height());
+					}
+					window.addEventListener('resize', reinitSize);
+					window.addEventListener('orientationchange', reinitSize);
+				}
+				
+			})();
 		};
 		/*[===> EDITOR <===]*/
 		

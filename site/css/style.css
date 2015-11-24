@@ -109,7 +109,7 @@ section.content { margin: 0px auto; }
 .popup .window { z-index: 100; margin: 0px auto; position: relative; display: inline-block; }
 
 /*[Container <]*/
-.popup .window .container { padding: 35px; color: #1a2f3f; font-size: 16px; min-width: 640px; text-align: left; line-height: 24px; background: #e0e0e0; border: solid 2px #fff; font-family: "CharterC"; -webkit-box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); }
+.popup .window .container { padding: 35px; color: #1a2f3f; font-size: 16px; text-align: left; line-height: 24px; background: #e0e0e0; border: solid 2px #fff; font-family: "CharterC"; -webkit-box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); }
 
 .popup .window .container p { margin: 15px 0px; }
 
@@ -634,7 +634,7 @@ nav.progress span[data-stage="4"].active { background-image: url(../img/elements
 .window { z-index: 100; margin: 0px auto; position: relative; display: inline-block; }
 
 /*[Box <]*/
-.window .box { padding: 35px; color: #1a2f3f; font-size: 16px; min-width: 640px; text-align: left; line-height: 24px; background: #e0e0e0; border: solid 2px #fff; font-family: "CharterC"; -webkit-box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); }
+.window .box { padding: 35px; color: #1a2f3f; font-size: 16px; text-align: left; line-height: 24px; background: #e0e0e0; border: solid 2px #fff; font-family: "CharterC"; -webkit-box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); box-shadow: 5px 5px 22px 0px rgba(1, 1, 1, 0.5); }
 
 .window .box p { margin: 15px 0px; }
 
@@ -653,7 +653,7 @@ nav.progress span[data-stage="4"].active { background-image: url(../img/elements
 /*[Button close >]*/
 /*[Window >]*/
 /*[Window message <]*/
-.window.message .box { width: 640px; }
+.window.message .box { max-width: 640px; }
 
 /*[Window message >]*/
 /*[Modal window >]*/
