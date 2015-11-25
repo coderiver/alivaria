@@ -35,6 +35,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
+@font-face { font-family: HaginCapsMedium; src: url("fonts/HaginCapsMedium.eot"); src: url("fonts/HaginCapsMedium.eot?#iefix") format("embedded-opentype"), url("fonts/HaginCapsMedium.woff2") format("woff2"), url("fonts/HaginCapsMedium.woff") format("woff"), url("fonts/HaginCapsMedium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .i-logo-new { display: inline-block; background: url(../img/logo_kaliadnae.png) center bottom no-repeat; width: 150px; height: 70px; background-size: cover; }
 
 .m-header { display: none; text-align: center; width: 100%; padding-bottom: 13px; position: relative; overflow: hidden; z-index: 2; }
@@ -65,6 +66,14 @@ nav.social:after, section.content:after, .welcome:after { content: " "; display:
 .m-progress .progress span.disable { display: none; }
 .m-progress .progress span.active, .m-progress .progress span.enable { display: block; }
 .m-progress .progress span.is-click { z-index: 2; }
+
+.btns-upload { position: absolute; top: 50%; left: 0; right: 0; text-align: center; margin-top: -67px; }
+.btns-upload button.upload { position: static; margin: 0; font-family: "HaginCapsMedium"; background: url(../img/button-upload.png) center no-repeat; font-size: 26px; text-transform: uppercase; }
+.btns-upload button.upload:last-child { margin-top: 20px; }
+
+.form-upload-photo .wrap { height: 100%; position: relative; text-align: center; font-size: 0; }
+.form-upload-photo .wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.form-upload-photo .wrap .btns-upload { display: inline-block; vertical-align: middle; }
 
 .slick-slider { position: relative; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -113,7 +122,6 @@ nav.social:after, section.content:after, .welcome:after { content: " "; display:
  .warn img{ opacity: 0.6; }
  .m-choose{ display: block; }
  .kineticjs-content{ top: 0; bottom: 0; left: 0; right: 0; }
- .kineticjs-content canvas:last-child{ display: none; }
  .m-progress{ display: block; } }
 
 

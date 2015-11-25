@@ -442,6 +442,8 @@ button.create-song:hover, button.create-song:active { background: #e34742; backg
 /*[Button remove >]*/
 /*[Form upload photo <]*/
 .form-upload-photo { top: 2px; left: 2px; width: 56%; z-index: 300; height: 318px; position: absolute; background: #e0e0e0; }
+.form-upload-photo #form-upload-photo { height: 100%; }
+.form-upload-photo .wrap { height: 100%; }
 
 /*[Demands <]*/
 .form-upload-photo .demands { width: 100%; bottom: 20px; color: #1a2f3f; font-size: 14px; position: absolute; text-align: center; }
@@ -808,7 +810,7 @@ button._2:hover:before, .button._2:hover:before, button._2:active:before, .butto
  .checking .logo { background: none; width: 100%; margin-bottom: 20px; }
  .checking .options .button { display: block; float: none; margin: 0 auto; }
  .checking .options .button + .button { float: none; margin-top: 20px; }
- .service .editor #scene { height: 100%; }
+ .service .editor #scene { height: 100vh; top: 0; left: 0; right: 0; }
  .service .editor #scene canvas { max-width: 100%; }
  .cover.is-active { display: block; }
  .service .editor .stage.active .wrap { display: none; }

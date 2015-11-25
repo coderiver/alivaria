@@ -1,7 +1,8 @@
 // Normally mainpage styles
 // body
 // 	+s(coderiver)
-
++font(HaginCapsMedium, HaginCapsMedium)
+ 
 .i-logo-new
 	// +s(logo_kaliadnae)
 	display: inline-block
@@ -106,9 +107,6 @@ section.content,
 		bottom: 0
 		left: 0
 		right: 0
-		canvas
-			&:last-child
-				display: none
 
 .m-progress
 	display: none
@@ -136,5 +134,30 @@ section.content,
 				display: block
 			&.is-click
 				z-index: 2 
+				
+.btns-upload
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	text-align: center
+	margin-top: -67px
+	button.upload
+		position: static
+		margin: 0
+		font-family: 'HaginCapsMedium'
+		background: url(../img/button-upload.png) center no-repeat 
+		font-size: 26px
+		text-transform: uppercase 
+		&:last-child
+			margin-top: 20px 
+.form-upload-photo
+	.wrap
+		height: 100% 
+		position: relative
+		+vertical
+		.btns-upload
+			display: inline-block
+			vertical-align: middle
 				
 		

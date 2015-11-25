@@ -63,6 +63,11 @@ var cliparts = {
 		}
 	}
 };
+//responsive masks
+(function(){
+
+	// cliparts.masks.goat.width = cliparts.masks.goat.width/2;
+})();
 
 /*[Function <]*/
 
@@ -355,6 +360,11 @@ $(function() {
 				width: 990,
 				height: 400,
 				container: 'scene'
+			});
+			console.dir(stage);
+			$(window).on('resize', function() {
+				var w = $(window).width();
+				// if (w < 600) stage.bufferCanvas.setWidth(400);
 			});
 
 			/*[Set stage <]*/
@@ -1351,7 +1361,6 @@ $(function() {
 				}).on('mouseout touchend', function() {
 					$('body').removeAttr('style');
 				}); workspace.add(mask);
-				
 				var image = new Kinetic.Image({
 					x: x, y: y,
 					type: name,
