@@ -452,9 +452,9 @@ button.create-song:hover, button.create-song:active { background: #e34742; backg
 
 /*[Demands >]*/
 /*[Button upload <]*/
-.form-upload-photo button.upload { top: 50%; left: 50%; width: 278px; height: 57px; cursor: pointer; overflow: hidden; position: absolute; margin: -28.5px 0px 0px -139px; background: #e34842 url(../img/elements/site/button/button-1.png) top left no-repeat; }
+.form-upload-photo button { top: 50%; left: 50%; width: 278px; height: 57px; cursor: pointer; overflow: hidden; position: absolute; margin: -28.5px 0px 0px -139px; background: #e34842 url(../img/elements/site/button/button-1.png) top left no-repeat; }
 
-.form-upload-photo button.upload:hover, .form-upload-photo button.upload:active { background-position: left bottom; }
+.form-upload-photo button:hover, .form-upload-photo button:active { background-position: left bottom; }
 
 /*[Button upload >]*/
 /*[Form upload photo >]*/

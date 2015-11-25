@@ -84,12 +84,18 @@
                             <form id="form-upload-photo" action="#" method="post" enctype="multipart/form-data">
                                 <div class="wrap">
                                     <div class="btns-upload">
-                                        <button class="upload" type="button">Зрабiць</button>
+                                        <button class="button js-webcam" type="button">Зрабiць</button>
                                     	<button class="upload" type="button">Запампаваць</button>
                                     </div>
                                     <div class="demands">
                                         <p>Фарматы - jpg, png, gif<br>Памер на больш за 10Mb</p>
                                     </div><!-- [ demands ] -->
+                                    <div class="make-photo js-make-photo">
+                                        <video id="video-screen" autoplay></video>
+                                        <div class="btns-upload">
+                                            <button class="js-photo" type="button">Зрабiць</button>
+                                        </div>
+                                    </div>
                                 </div><!-- [ wrap ] -->
                                 <div class="m-choose">
                                     <div class="info-window">
@@ -335,6 +341,7 @@
         <!-- [> HIDDEN <] -->
         <div class="hidden">
             <input id="file-photo" type="file">
+            <input id="file-photo2" type="file">
             
             <div class="popup" data-name="custom-sound">
                 <div class="align">
@@ -474,9 +481,6 @@
             
         </div><!-- [ hidden ] -->
         <!-- [> HIDDEN <] -->
-        <video autoplay="true" id="videoElement">
-         
-        </video>
     </body>
 </html>
         

@@ -1415,7 +1415,7 @@ button.create-song:active {
 /*[Demands >]*/
 
 /*[Button upload <]*/
-.form-upload-photo button.upload {
+.form-upload-photo button {
 	top:50%;
 	left:50%;
 	width:278px;
@@ -1426,8 +1426,8 @@ button.create-song:active {
 	margin:-28.5px 0px 0px -139px;
 	background:#e34842 url(../img/elements/site/button/button-1.png) top left no-repeat;
 }
-.form-upload-photo button.upload:hover,
-.form-upload-photo button.upload:active {
+.form-upload-photo button:hover,
+.form-upload-photo button:active {
 	background-position:left bottom;
 }
 /*[Button upload >]*/

@@ -68,12 +68,16 @@ nav.social:after, section.content:after, .welcome:after { content: " "; display:
 .m-progress .progress span.is-click { z-index: 2; }
 
 .btns-upload { position: absolute; top: 50%; left: 0; right: 0; text-align: center; margin-top: -67px; }
-.btns-upload button.upload { position: static; margin: 0; font-family: "HaginCapsMedium"; background: url(../img/button-upload.png) center no-repeat; font-size: 26px; text-transform: uppercase; }
-.btns-upload button.upload:last-child { margin-top: 20px; }
+.btns-upload button { position: static; margin: 0; font-family: "HaginCapsMedium"; background: url(../img/button-upload.png) center no-repeat; font-size: 26px; text-transform: uppercase; }
+.btns-upload button:last-child { margin-top: 20px; }
 
 .form-upload-photo .wrap { height: 100%; position: relative; text-align: center; font-size: 0; }
 .form-upload-photo .wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .form-upload-photo .wrap .btns-upload { display: inline-block; vertical-align: middle; }
+
+.make-photo { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: none; background: #e0e0e0; }
+.make-photo video { display: block; width: 100%; height: 100%; }
+.make-photo .btns-upload { bottom: 20px; top: initial; }
 
 .slick-slider { position: relative; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 

@@ -1095,6 +1095,562 @@ $(function() {
 			$('.form-upload-photo button.upload').on('click', function() {
 				$('#file-photo').trigger('click');
 			});
+
+
+
+			// $('#file-photo2').fileupload({
+			// 	dataType: 'json',
+			// 	maxFileSize: 10 * 1024 * 1024,
+			// 	url: base_path + '/server/uploader/',
+			// 	acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+			// 	processalways: function(e, data) {
+			// 		if (data.files.error) {
+			// 			$.arcticmodal({
+			// 				content: 
+			// 					'<div class="window message">'+
+			// 						'<button class="close"></button>'+
+			// 						'<div class="box">'+
+			// 							'<div class="title">На жаль, адбылася памылка.</div>'+
+			// 							'<p>'+
+			// 								'Дадзены фармат файлаў не падтрымліваецца.<br>'+
+			// 								'Вы можаце запампаваць любую выяву ў фармаце JPG, PNG ці GIF памерам<br>'+
+			// 								'не больш за 10 Мб'+
+			// 							'</p>'+
+			// 						'</div><!-- [ box ] -->'+
+			// 					'</div><!-- [ window ] -->'            
+			// 			});
+			// 		};
+			// 	},
+			// 	progressall: function(e, data) {
+			// 		var progress = parseInt(data.loaded / data.total * 100, 10);
+			// 		$('.service .loader').show();
+			// 		$('.service .loader .label').html(progress + '%');
+			// 		$('.service .loader .progress').width(progress + '%');
+			// 	},
+			// 	done: function(e, data) {
+			// 		var file = data.result.files[0],
+			// 			url = file.url;
+					
+			// 		if (url) {
+						
+			// 			/*[Load photo <]*/
+			// 			loadImage(url, function(image) {
+			// 				$('.form-upload-photo').hide(function() {
+			// 					$('.service .loader').fadeOut(function(e) {
+			// 						$('.service .loader .label').html('0%');
+			// 						$('.service .loader .progress').width('0%');
+			// 					});
+			// 				});
+							
+			// 				/*[Create photo <]*/
+			// 				var photo_image = image,
+			// 					photo_natural_width = photo_image.naturalWidth,
+			// 					photo_natural_height = photo_image.naturalHeight,
+			// 					photo_natural_aspect_ratio = photo_natural_height / photo_natural_width;
+							
+			// 				var photo_width  = workspace_width,
+			// 					photo_height = photo_width * photo_natural_aspect_ratio;
+							
+			// 				if (photo_height < workspace_height) {
+			// 					photo_height = workspace_height;
+			// 					photo_width = (photo_height / photo_natural_height) * photo_natural_width;
+			// 				};
+							
+			// 				var photo_scale_ratio = photo_natural_width / photo_width;
+							
+			// 				var photo = new Kinetic.Image({
+			// 					x: 0, y: 0,
+			// 					draggable: true,
+			// 					image: photo_image,
+			// 					width: photo_width,
+			// 					height: photo_height,
+			// 					dragBoundFunc: function(position) {
+			// 						var y = position.y,
+			// 							x = workspace_bound_left;
+									
+			// 						if (y > workspace_bound_top) {
+			// 							y = workspace_bound_top;
+			// 						};
+			// 						if ((y + photo_height) < workspace_bound_bottom) {
+			// 							y = workspace_bound_bottom - photo_height;
+			// 						};
+									
+			// 						return {x: x, y: y}
+			// 					}
+			// 				});
+			// 				/*[Create photo >]*/
+							
+			// 				/*[Create overlay <]*/
+			// 				var overlay = new Kinetic.Rect({
+			// 					x: 0, y: 0,
+			// 					opacity: .4,
+			// 					fill: '#000',
+			// 					width: workspace_width,
+			// 					height: workspace_height
+			// 				});
+			// 				/*[Create overlay >]*/
+							
+			// 				/*[Load small photo <]*/
+			// 				loadImage(photo.toDataURL('image/jpeg', 1.0), function(image) {
+			// 					workspace.add(photo.x(0)).draw();
+								
+			// 					/*[Stage photo crop <]*/
+			// 					var stagePhotoCrop = function() {
+									
+			// 						/*[Get result <]*/
+			// 						var getResult = function() {
+			// 							resultat = {
+			// 								star: !1,
+			// 								mask: [],
+			// 								sound: sound_src,
+			// 								music: music_src,
+			// 								photo: photo_src,
+			// 								is_custom_sound: is_custom_sound
+			// 							};
+										
+			// 							/*[Star <]*/
+			// 							if (star_on_photo) {
+			// 								resultat.star = {
+			// 									x: star_on_photo.x(),
+			// 									y: star_on_photo.y(),
+			// 									width: star_on_photo.width(),
+			// 									height: star_on_photo.height(),
+			// 									src: star_on_photo.getImage().attributes.src.value,
+			// 									offset: {
+			// 										x: star_on_photo.offsetX(),
+			// 										y: star_on_photo.offsetY()
+			// 									}
+			// 								};
+			// 							};
+			// 							/*[Star >]*/
+										
+			// 							/*[Mask <]*/
+			// 							if (mask_on_photo.length) {
+			// 								for (key in mask_on_photo) {
+			// 									var mask = mask_on_photo[key].getChildren()[0];
+												
+			// 									resultat.mask.push({
+			// 										x: mask.x(),
+			// 										y: mask.y(),
+			// 										width: mask.width(),
+			// 										height: mask.height(),
+			// 										src: mask.getImage().attributes.src.value,
+			// 										offset: {
+			// 											x: mask.offsetX(),
+			// 											y: mask.offsetY()
+			// 										}
+			// 									});
+			// 								};
+			// 							};
+			// 							/*[Mask >]*/
+										
+			// 							return JSON.stringify(resultat);
+			// 						};
+			// 						/*[Get result >]*/
+							
+			// 						/*[Save picture <]*/
+			// 						var savePicture = function() {
+			// 							workspace.setAttrs({x: 0, y: 0});
+										
+			// 							var name = new Date().getUnixTimestamp() + '.png',
+			// 								photo = workspace.find('.photography')[0].toDataURL({
+			// 									width: 560,
+			// 									height: 320,
+			// 									mimeType: "image/png"
+			// 								}),
+			// 								collage = workspace.toDataURL({
+			// 									width: 560,
+			// 									height: 320,
+			// 									mimeType: "image/png"
+			// 								});
+										
+			// 							photo_src = '/files/photo/' + name;
+										
+			// 							workspace.setAttrs({x: workspace_x, y: workspace_y});
+										
+			// 							$.ajax({
+			// 								type: 'POST',
+			// 								dataType: 'json',
+			// 								data: {
+			// 									name: name,
+			// 									photo: photo,
+			// 									collage: collage,
+			// 									config: getResult()
+			// 								},
+			// 								url: base_path + '/server/savephoto.php'
+			// 							});
+			// 						};
+			// 						/*[Save picture <]*/
+									
+			// 						/*[Stage buttons <]*/
+			// 						$('.stage[data-step="1.1"] button.next').on('click', function(e) {
+			// 							photoFrameSave();
+			// 							activeMaskOnToolbar(mask_on_toolbar);
+			// 						});
+			// 						$('.stage[data-step="1.2"] button.next').on('click', function(e) {
+			// 							hideMaskControls();
+			// 							hideMaskOnToolbar(mask_on_toolbar);
+			// 						});
+			// 						$('.stage[data-step="2.0"] button.next').on('click', function(e) {
+			// 							hideStarControls();
+			// 							hideStarOnToolbar(star_on_toolbar);
+			// 						});
+			// 						$('.stage[data-step="3.0"] button.next').on('click', function(e) {
+			// 							savePicture();
+			// 							animateClipart();
+			// 							soundManager.stopAll();
+			// 							$('.service .editor .player').show();
+			// 							if (is_custom_sound) {
+			// 								playSoundSet();
+			// 							} else {
+			// 								playSound();
+			// 							};
+			// 						});
+			// 						/*[Stage buttons >]*/
+									
+			// 						/*[Create operate frame <]*/
+			// 						var frame_group = new Kinetic.Group({
+			// 							x: 0, y: 0,
+			// 							draggable: true,
+			// 							width: workspace_width,
+			// 							height: workspace_height,
+			// 							dragBoundFunc: function(position) {
+			// 								var x = position.x,
+			// 									y = position.y;
+											
+			// 								if (y + anchor_tl.y() <= workspace_bound_top) {
+			// 									y = workspace_bound_top - anchor_tl.y();
+			// 								};
+			// 								if (x + anchor_tl.x() <= workspace_bound_left) {
+			// 									x = workspace_bound_left - anchor_tl.x();
+			// 								};
+			// 								if ((x + anchor_tl.x() + photo_operate_frame.width()) >= workspace_bound_right) {
+			// 									x = workspace_bound_right - photo_operate_frame.width() - anchor_tl.x()
+			// 								};
+			// 								if ((y + anchor_tl.y() + photo_operate_frame.height()) >= workspace_bound_bottom) {
+			// 									y = workspace_bound_bottom - photo_operate_frame.height() - anchor_tl.y()
+			// 								};
+											
+			// 								photo_operate_frame.crop({
+			// 									x: ((x + anchor_tl.x()) - workspace_x),
+			// 									y: ((y + anchor_tl.y()) - workspace_y) - photo.y()
+			// 								});
+											
+			// 								photoFrameFind();
+											
+			// 								return {x: x, y: y};
+			// 							}
+			// 						});
+									
+			// 						/*[Frame <]*/
+			// 						var frame_width  = Math.round(workspace_width - 30),
+			// 							frame_height = Math.round(frame_width * workspace_aspect_ratio),
+			// 							frame_x = Math.round((workspace_width / 2) - (frame_width / 2)),
+			// 							frame_y = Math.round((workspace_height / 2) - (frame_height / 2));
+			// 						var photo_operate_frame = new Kinetic.Image({
+			// 							x: frame_x,
+			// 							y: frame_y,
+			// 							image: image,
+			// 							stroke: '#fff',
+			// 							strokeWidth: 2,
+			// 							width: frame_width,
+			// 							height: frame_height,
+			// 							crop: {
+			// 								x: frame_x,
+			// 								width: frame_width,
+			// 								height: frame_height,
+			// 								y: frame_y - photo.y()
+			// 							}
+			// 						}); frame_group.add(photo_operate_frame);
+									
+			// 						photo_operate_frame.on('dragend mouseout touchend', function() {
+			// 							$('body').removeAttr('style');
+			// 						});
+									
+			// 						photo_operate_frame.on('dragmove mouseover touchstart', function() {
+			// 							if (photo_operate_frame.width() < workspace_width || photo_operate_frame.height() < workspace_height) {
+			// 								document.body.style.cursor = 'move';
+			// 							};
+			// 						});
+									
+			// 						var frameSetSize = function(A, B, direction) {
+			// 							var Ax, Ay, Bx, By, width, height, diagonal;
+										
+			// 							Ax = A.x(); Ay = A.y(); Bx = B.x(); By = B.y();
+										
+			// 							diagonal = getDistance(Ax, Ay, Bx, By);
+										
+			// 							width = 
+			// 								Math.round(
+			// 									Math.sqrt(
+			// 										Math.pow(diagonal, 2) / 
+			// 										(1 + Math.pow(workspace_aspect_ratio, 2))
+			// 									)
+			// 								);
+										
+			// 							width = (width > 200) ? width : 200;
+										
+			// 							/*[Correction width <]*/
+			// 							var frame_x = frame_group.getAbsolutePosition().x,
+			// 								frame_y = frame_group.getAbsolutePosition().y,
+											
+			// 								frame_point_tl_x = (frame_x + anchor_tl.x()),
+			// 								frame_point_tl_y = (frame_y + anchor_tl.y()),
+										
+			// 								frame_point_tr_x = (frame_x + anchor_tr.x()),
+			// 								frame_point_tr_y = (frame_y + anchor_tr.y()),
+											
+			// 								frame_point_bl_x = (frame_x + anchor_bl.x()),
+			// 								frame_point_bl_y = (frame_y + anchor_bl.y()),
+											
+			// 								frame_point_br_x = (frame_x + anchor_br.x()),
+			// 								frame_point_br_y = (frame_y + anchor_br.y());
+											
+			// 								is_bound_top = frame_point_tl_y <= workspace_bound_top || frame_point_tr_y <= workspace_bound_top,
+			// 								is_bound_left = frame_point_tl_x <= workspace_bound_left || frame_point_bl_x <= workspace_bound_left,
+			// 								is_bound_right = frame_point_tr_x >= workspace_bound_right || frame_point_br_x >= workspace_bound_right,
+			// 								is_bound_bottom = frame_point_bl_y >= workspace_bound_bottom || frame_point_br_y >= workspace_bound_bottom;
+										
+			// 							var setWidthLimit = function() {
+			// 								if (width > photo_operate_frame.width()) {
+			// 									width = photo_operate_frame.width();
+			// 								};
+			// 							};
+										
+			// 							if (direction == 'tl-br') {
+			// 								if (is_bound_right && is_bound_bottom) {
+			// 									width = (width <= workspace_width) ? width : workspace_width;
+			// 								} else if (is_bound_top || is_bound_left) {setWidthLimit()};
+			// 							};
+			// 							if (direction == 'tr-bl') {
+			// 								if (is_bound_left && is_bound_bottom) {
+			// 									width = (width <= workspace_width) ? width : workspace_width;
+			// 								} else if (is_bound_top || is_bound_right) {setWidthLimit()};
+			// 							};
+			// 							if (direction == 'bl-tr') {
+			// 								if (is_bound_top && is_bound_right) {
+			// 									width = (width <= workspace_width) ? width : workspace_width;
+			// 								} else if (is_bound_left || is_bound_bottom) {setWidthLimit()};
+			// 							};
+			// 							if (direction == 'br-tl') {
+			// 								if (is_bound_top && is_bound_left) {
+			// 									width = (width <= workspace_width) ? width : workspace_width;
+			// 								} else if (is_bound_right || is_bound_bottom) {setWidthLimit()};
+			// 							};
+			// 							/*[Correction width >]*/
+										
+			// 							height = Math.round(workspace_aspect_ratio * width);
+										
+			// 							photo_operate_frame.setAttrs({
+			// 								width: width,
+			// 								height: height,
+			// 								crop: {
+			// 									width: width,
+			// 									height: height
+			// 								}
+			// 							});
+										
+			// 							anchor_tl_x = photo_operate_frame.x();
+			// 							anchor_tl_y = photo_operate_frame.y();
+										
+			// 							anchor_tr_x = anchor_tl_x + photo_operate_frame.width();
+			// 							anchor_tr_y = anchor_tl_y;
+										
+			// 							anchor_bl_x = anchor_tl_x;
+			// 							anchor_bl_y = anchor_tl_y + photo_operate_frame.height();
+										
+			// 							anchor_br_x = anchor_tr_x;
+			// 							anchor_br_y = anchor_bl_y;
+										
+			// 							if (direction == 'tl-br') {
+			// 								photo_operate_frame.setAttrs({
+			// 									x: anchor_br.x() - width,
+			// 									y: anchor_br.y() - height
+			// 								});
+			// 							};
+			// 							if (direction == 'tr-bl') {
+			// 								photo_operate_frame.setAttrs({
+			// 									x: anchor_bl.x(),
+			// 									y: anchor_bl.y() - height
+			// 								});
+			// 							};
+			// 							if (direction == 'bl-tr') {
+			// 								photo_operate_frame.setAttrs({
+			// 									x: anchor_tr.x() - width,
+			// 									y: anchor_tr.y()
+			// 								});
+			// 							};
+			// 							if (direction == 'br-tl') {
+			// 								photo_operate_frame.setAttrs({
+			// 									x: anchor_tl.x(),
+			// 									y: anchor_tl.y()
+			// 								});
+			// 							};
+										
+			// 							anchorSetPosition();
+			// 							photoFrameFind();
+										
+			// 							photo_operate_frame.crop({
+			// 								x: ((frame_group.getAbsolutePosition().x + anchor_tl.x()) - workspace_x),
+			// 								y: ((frame_group.getAbsolutePosition().y + anchor_tl.y()) - workspace_y) - photo.y()
+			// 							});
+			// 						};
+			// 						/*[Frame >]*/
+									
+			// 						/*[Anchor <]*/
+			// 						var anchor_options = {
+			// 							width: 10,
+			// 							height: 10,
+			// 							fill: '#fff',
+			// 							draggable: true,
+			// 							offset: {x: 5, y: 5}
+			// 						};
+									
+			// 						var anchor_tl = new Kinetic.Rect(anchor_options); frame_group.add(anchor_tl);
+			// 						var anchor_tr = new Kinetic.Rect(anchor_options); frame_group.add(anchor_tr);
+			// 						var anchor_bl = new Kinetic.Rect(anchor_options); frame_group.add(anchor_bl);
+			// 						var anchor_br = new Kinetic.Rect(anchor_options); frame_group.add(anchor_br);
+									
+			// 						anchor_tl.on('dragmove', function(position) {frameSetSize(anchor_tl, anchor_br, 'tl-br')});
+			// 						anchor_tr.on('dragmove', function(position) {frameSetSize(anchor_tr, anchor_bl, 'tr-bl')});
+			// 						anchor_bl.on('dragmove', function(position) {frameSetSize(anchor_bl, anchor_tr, 'bl-tr')});
+			// 						anchor_br.on('dragmove', function(position) {frameSetSize(anchor_br, anchor_tl, 'br-tl')});
+									
+			// 						anchor_tl.on('dragend mouseout touchend', function() {$('body').removeAttr('style');});
+			// 						anchor_tr.on('dragend mouseout touchend', function() {$('body').removeAttr('style');});
+			// 						anchor_br.on('dragend mouseout touchend', function() {$('body').removeAttr('style');});
+			// 						anchor_bl.on('dragend mouseout touchend', function() {$('body').removeAttr('style');});
+									
+			// 						anchor_tl.on('dragmove mouseover touchstart', function() {document.body.style.cursor = 'nw-resize';});
+			// 						anchor_tr.on('dragmove mouseover touchstart', function() {document.body.style.cursor = 'ne-resize';});
+			// 						anchor_br.on('dragmove mouseover touchstart', function() {document.body.style.cursor = 'nw-resize';});
+			// 						anchor_bl.on('dragmove mouseover touchstart', function() {document.body.style.cursor = 'ne-resize';});
+									
+			// 						var anchorSetPosition = function() {
+			// 							anchor_tl_x = photo_operate_frame.x();
+			// 							anchor_tl_y = photo_operate_frame.y();
+										
+			// 							anchor_tr_x = anchor_tl_x + photo_operate_frame.width();
+			// 							anchor_tr_y = anchor_tl_y;
+										
+			// 							anchor_bl_x = anchor_tl_x;
+			// 							anchor_bl_y = anchor_tl_y + photo_operate_frame.height();
+										
+			// 							anchor_br_x = anchor_tr_x;
+			// 							anchor_br_y = anchor_bl_y;
+										
+			// 							anchor_tl.setAttrs({x: anchor_tl_x, y: anchor_tl_y});
+			// 							anchor_tr.setAttrs({x: anchor_tr_x, y: anchor_tr_y});
+			// 							anchor_bl.setAttrs({x: anchor_bl_x, y: anchor_bl_y});
+			// 							anchor_br.setAttrs({x: anchor_br_x, y: anchor_br_y});
+			// 						}; anchorSetPosition();
+			// 						/*[Anchor >]*/
+									
+			// 						/*[Create operate frame >]*/
+									
+			// 						/*[Create natural frame <]*/
+			// 						var photo_natural_frame = new Kinetic.Image({
+			// 							x: 0, y: 0,
+			// 							stroke: '#fff',
+			// 							visible: false,
+			// 							strokeWidth: 2,
+			// 							image: photo_image,
+			// 							width: workspace_width,
+			// 							height: workspace_height
+			// 						});
+									
+			// 						var photoFrameFind = function() {
+			// 							var width = photo_operate_frame.width() * photo_scale_ratio,
+			// 								height = photo_operate_frame.height() * photo_scale_ratio,
+			// 								x = ((frame_group.x() + anchor_tl.x()) * photo_scale_ratio),
+			// 								y = (((frame_group.y() + anchor_tl.y()) + (photo.y() * -1)) * photo_scale_ratio);
+										
+			// 							photo_natural_frame.setAttrs({
+			// 								crop: {
+			// 									x: x, y: y,
+			// 									width: width,
+			// 									height: height
+			// 								}
+			// 							});
+			// 						}; photoFrameFind();
+									
+			// 						var photoFrameSave = function() {
+			// 							photo_natural_frame.visible(true);
+			// 							var src = photo_natural_frame.toDataURL({
+			// 								quality: 1,
+			// 								x: workspace_x,
+			// 								y: workspace_y,
+			// 								mimeType: "image/png",
+			// 								width: workspace_width,
+			// 								height: workspace_height
+			// 							});
+										
+			// 							loadImage(src, function(crop) {
+			// 								photo.destroy();
+			// 								photo_natural_frame.destroy();
+			// 								photo_operate_frame.destroy();
+											
+			// 								var photography = new Kinetic.Image({
+			// 									x: 0, y: 0,
+			// 									image: crop,
+			// 									name: 'photography',
+			// 									width: workspace_width,
+			// 									height: workspace_height
+			// 								}).on('click dragstart touchstart', function() {
+			// 									hideMaskControls();
+			// 									hideStarControls();
+			// 								});
+											
+			// 								workspace.add(photography);
+			// 								workspace.draw();
+			// 							});
+			// 						};
+			// 						/*[Create natural frame >]*/
+									
+			// 						workspace.add(overlay)
+			// 								 .add(frame_group)
+			// 								 .add(photo_natural_frame).draw();
+									
+			// 					};
+			// 					/*[Stage photo crop >]*/
+								
+			// 					if (photo.height() == workspace_height) {
+			// 						setStage('1.1');
+			// 						stagePhotoCrop();
+			// 					} else {
+			// 						setStage('1.0');
+			// 						photo.on('dragend mouseout touchend', function() {$('body').removeAttr('style')});
+			// 						photo.on('dragmove mouseover touchstart', function() {document.body.style.cursor = 'n-resize'});
+			// 					};
+								
+			// 					$('.stage[data-step="1.0"] button.next').on('click', function(e) {
+			// 						stagePhotoCrop();
+			// 					});
+			// 				});
+			// 				/*[Load small photo <]*/
+							
+			// 			});
+			// 			/*[Load photo >]*/
+						
+			// 		} else {
+			// 			$.arcticmodal({
+			// 				content: 
+			// 					'<div class="window message">'+
+			// 						'<button class="close"></button>'+
+			// 						'<div class="box">'+
+			// 							'<div class="title">На жаль, адбылася памылка.</div>'+
+			// 							'<p>Паспрабуйце паўтарыць спробу запампоўкі.</p>'+
+			// 						'</div><!-- [ box ] -->'+
+			// 					'</div><!-- [ window ] -->'            
+			// 			});
+			// 		};
+			// 	}
+			// });
+			
+			// $('.form-upload-photo .js-photo').on('click', function() {
+			// 	$('#file-photo2').trigger('click');
+			// });
+
 			/*[Upload photo >]*/
 		
 			/*[Load clipart <]*/
